@@ -43,6 +43,17 @@
 #CSHARP-bar{
     animation: CSHARP 2s forwards;
 }
+/* langs */
+#PERSIAN-bar{
+    animation:PERSIAN 2s forwards
+}
+#ENGLISH-bar{
+    animation:ENGLISH 2s forwards
+}
+#KOREAN-bar{
+        animation:KOREAN 2s forwards
+}
+
 @keyframes HTML{
     100%{
          width: 85%;
@@ -81,5 +92,21 @@
 @keyframes CSHARP {
     100%{
         width:5%
+    }
+}
+/* langs */
+@keyframes PERSIAN {
+    100%{
+        width:99%
+    }
+}
+@keyframes ENGLISH {
+    100%{
+        width: 80%;
+    }
+}
+@keyframes KOREAN {
+    100%{
+        width:35%
     }
 }

@@ -62,7 +62,20 @@
                 <span>شهر : <%- config.left.city %></span></br>
                 <span><%- config.left.age %> : سن</span></br>
             </p>
+            <hr>
 
+            <% config.left.langs_name.forEach(lang_name=> { %>
+                <div class="skills">
+                    <div class="details">
+                        <span><%- lang_name %></span>
+                    </div>
+                    <div class="bar">
+                        <div id="<%- lang_name %>-bar"></div>
+                    </div>
+                </div>
+            <% }) %>
+            <hr>
+            
             <% config.left.skills_name.forEach(skill_name=> { %>
                 <div class="skills">
                     <div class="details">
@@ -73,7 +86,7 @@
                     </div>
                 </div>
             <% }) %>
-  
+            <hr>
 
             <div class="repo-dn">
                 <a class="repo-dn" href="https://github.com/hadiazt/hadi-az.me/archive/refs/heads/main.zip" target="_blank">
