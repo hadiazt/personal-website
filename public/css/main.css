@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'aviny';
+    src: url('../fonts/aviny/aviny.eot');
+    src: url('../fonts/aviny/aviny.svg') format('svg'),
+    url('../fonts/aviny/aviny.woff2') format('woff2'),
+    url('../fonts/aviny/aviny.woff') format('woff'),
+    url('../fonts/aviny/aviny.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans/IRANSansWebFaNum.eot');
+    src: url('../fonts/sans/IRANSansWebFaNum.svg') format('svg'),
+    url('../fonts/sans/IRANSansWebFaNum.woff2') format('woff2'),
+    url('../fonts/sans/IRANSansWebFaNum.woff') format('woff'),
+    url('../fonts/sans/IRANSansWebFaNum.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffca2b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffca2b;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:#191923;
+    font-family: 'sans';
+    color: white;
+}
+.left{
+    width: 17%;
+    height: 97vh;
+    float: left;
+    box-shadow: 2px 2px 5px 0 #191923;
+}
+.right-up{
+    border-radius: 0 20px 0 0;
+    background-color:#2d2d38;
+    margin-left: 17%;
+    height: 37.9vh;
+}
+.right-down{
+    border-radius: 0 0 20px 0;
+    background-color:#20202a;
+    margin-left: 17%;
+    height: 59.1vh;
+}
+.header{
+    background-color:#2d2d38;
+    border-radius: 20px 0 0 0;
+}
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+    display: block;
+    padding-top:10px;
+}
+.name{
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-family: 'aviny';
+}
+.abilities{
+    margin: -5px 0 15px 0;
+    font-size: 10px;
+    color: #8c8c8e;
+    text-align: center;
+}
+.description{
+    padding: 20px;
+    margin-top: -16px;
+    border-radius: 0 0 0 20px;
+    background-color:#20202a;
+    max-height: 53.1vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.repo-dn{
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    float: right;
+    color: #8c8c8e;
+    text-decoration: none;
+}
