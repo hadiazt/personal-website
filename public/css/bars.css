@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;  
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin: 5px 0 5px 0;
 }
 .bar{
     position: relative;
@@ -19,11 +19,67 @@
     border-radius: 10px;
     background-color: #ffca2b;
 }
-#bar{
-    animation: css-fill 2s forwards;
+#HTML-bar{
+    animation: HTML 2s forwards;
 }
-@keyframes css-fill{
+#CSS-bar{
+    animation: CSS 2s forwards;
+}
+#JavaScript_Front-End-bar{
+    animation:JS-FRONT-END 2s forwards
+}
+#JavaScript_Back-End-bar{
+    animation:JS-BACK-END 2s forwards
+}
+#TypeScript-bar{
+    animation: ts 2s forwards;
+}
+#CSS3-bar{
+    animation: css3 2s forwards;
+}
+#PHP-bar{
+    animation: PHP 2s forwards;
+}
+#CSHARP-bar{
+    animation: CSHARP 2s forwards;
+}
+@keyframes HTML{
     100%{
-         width: 75%;
+         width: 85%;
+    }
+}
+@keyframes CSS{
+    100%{
+        width: 80%;
+    }
+}
+@keyframes JS-FRONT-END{
+    100%{
+        width: 60%;
+    }
+}
+@keyframes JS-BACK-END{
+    100%{
+        width: 95%;
+    }
+}
+@keyframes ts{
+    100%{
+        width:40%
+    }
+}
+@keyframes css3 {
+    100%{
+        width: 15%;
+    }
+}
+@keyframes PHP {
+    100%{
+        width:20%
+    }   
+}
+@keyframes CSHARP {
+    100%{
+        width:5%
     }
 }
