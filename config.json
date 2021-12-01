@@ -27,6 +27,11 @@
             "CSS3",
             "PHP",
             "CSHARP"
+        ],
+        "langs_name":[
+            "PERSIAN",
+            "ENGLISH",
+            "KOREAN"
         ]
     }
 }
