@@ -90,9 +90,14 @@ hr{
     overflow-y: scroll;
     scrollbar-width: none;
 }
+.social-buttons{
+    font-size: 15px;
+    color: #8c8c8e;
+    text-decoration: none;
+}
 .repo-dn{
     font-size: 15px;
-    float: right;
+    text-align: right;
     color: #8c8c8e;
     text-decoration: none;
 }
