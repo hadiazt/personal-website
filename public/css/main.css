@@ -58,6 +58,7 @@ hr{
     margin-left: 17%;
     height: 59.1vh;
 }
+/*  */
 .header{
     background-color:#2d2d38;
     border-radius: 20px 0 0 0;
@@ -105,4 +106,41 @@ hr{
     text-align: right;
     color: #8c8c8e;
     text-decoration: none;
+}
+/*  */
+.image-right{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 10px 0 auto;
+    display: block;
+    padding-top:10px;
+}
+.acc-info{
+    float: right;
+    text-align: center;
+}
+.acc-stats{
+    margin-top: -20px;
+}
+
+.images{
+    float: left;
+}
+.texts{
+padding-top: 5px;
+text-align: left;
+}
+.large_image{
+    height:150px;
+    width:150px;
+    border-radius: 25px;
+    padding: 20px;
+}
+.small_image{
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    margin: 0 0 0 -30px;
+    background-color:#fff
 }

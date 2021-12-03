@@ -3,7 +3,7 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="theme-color" content="#0075d5">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
@@ -42,78 +42,110 @@
 
 <body>
 
-
-    <div class="left">
-        <div class="header">
-            <img class="image" src="<%- config.left.imglink %>">
-            <h2 class="name">
-                <%- config.left.name %>
-            </h2>
-            <div class="abilities">
-                <% config.left.abilities.forEach(ability=> { %>
-                    <%- ability %></br>
+        <div class="left">
+            <div class="header">
+                <img class="image" src="<%- config.left.imglink %>">
+                <h2 class="name">
+                    <%- config.left.name %>
+                </h2>
+                <div class="abilities">
+                    <% config.left.abilities.forEach(ability=> { %>
+                        <%- ability %></br>
+                    <% }) %>
+                </div>
+            </div>
+            
+            <div class="description">
+    
+                <p class="description-infos">
+                    <span style="float:right;">: ملیت</span><span class="infos" ><%- config.left.country %></span></br>
+                    <span style="float:right;">: شهر</span><span class="infos"><%- config.left.city %></span></br>
+                    <span style="float:right;">: سن</span><span class="infos"><%- config.left.age %></span></br>
+                </p>
+                
+                <hr>
+    
+                <% config.left.langs_name.forEach(lang_name=> { %>
+                    <div class="skills">
+                        <div class="details">
+                            <span><%- lang_name %></span>
+                        </div>
+                        <div class="bar">
+                            <div id="<%- lang_name %>-bar"></div>
+                        </div>
+                    </div>
                 <% }) %>
+                <hr>
+                
+                <% config.left.skills_name.forEach(skill_name=> { %>
+                    <div class="skills">
+                        <div class="details">
+                            <span><%- skill_name%></span>
+                        </div>
+                        <div class="bar">
+                            <div id="<%- skill_name%>-bar"></div>
+                        </div>
+                    </div>
+                <% }) %>
+    
+                <hr>
+    
+                <div class="social-buttons">
+                    <a class="social-buttons" href="<%- config.left.social.github %>" target="_blank" ><i class="fab fa-github-square"></i></a>
+                    <a class="social-buttons" href="<%- config.left.social.discord %>" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a class="social-buttons" href="<%- config.left.social.instagram %>" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="social-buttons" href="<%- config.left.social.telegram %>" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a class="social-buttons" href="tel:<%- config.left.social.phone %>" target="_blank"><i class="fas fa-phone"></i></a>
+                    <a class="social-buttons" href="mailto:<%- config.left.social.email %>" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+    
+                <hr>
+    
+                <div class="repo-dn">
+                    <a class="repo-dn" href="https://github.com/hadiazt/hadi-az.me/archive/refs/heads/main.zip" target="_blank">
+                        <i class="fas fa-download"></i>                    
+                        <span>دانلود قالب</span>
+                    </a>
+                </div> 
+    
             </div>
         </div>
-        
-        <div class="description">
+    
+        <div class="right-up">
+            <div class="acc-info">
+                <img class="image-right" src="<%- DATA.USER.INFO.AVATAR %>">
+                <h2 class="acc-name"><%- DATA.USER.INFO.NAME %></h2>
+                <% if(DATA.USER.INFO.STATUS === 'online') { %> 
+                    <h5 class="acc-stats"style="color:#57F287;"> <%- DATA.USER.INFO.STATUS %></h5>
+                <% } else if(DATA.USER.INFO.STATUS === 'idle') { %> 
+                    <h5 class="acc-stats"style="color:#FEE75C;"> <%- DATA.USER.INFO.STATUS %></h5>
+                <% } else if(DATA.USER.INFO.STATUS === 'dnd') { %> 
+                    <h5 class="acc-stats"style="color:#ED4245;"> <%- DATA.USER.INFO.STATUS %></h5>
+                <% } else if(DATA.USER.INFO.STATUS === 'offline') { %> 
+                    <h5 class="acc-stats"style="color:#8c8c8e;"> <%- DATA.USER.INFO.STATUS %></h5>
+                <% } %>
 
-            <p class="description-infos">
-                <span style="float:right;">: ملیت</span><span class="infos" ><%- config.left.country %></span></br>
-                <span style="float:right;">: شهر</span><span class="infos"><%- config.left.city %></span></br>
-                <span style="float:right;">: سن</span><span class="infos"><%- config.left.age %></span></br>
-            </p>
+            </div>
             
-            <hr>
 
-            <% config.left.langs_name.forEach(lang_name=> { %>
-                <div class="skills">
-                    <div class="details">
-                        <span><%- lang_name %></span>
-                    </div>
-                    <div class="bar">
-                        <div id="<%- lang_name %>-bar"></div>
-                    </div>
+            <div class="discord">
+                <div class="images">
+                    <img class="large_image" src="<%- DATA.USER.ACTIVITY.ASSETS.LARGEIMAGEURL %>">
+                    <img class="small_image" src="<%- DATA.USER.ACTIVITY.ASSETS.SMALLIMAGEURL %>">
                 </div>
-            <% }) %>
-            <hr>
-            
-            <% config.left.skills_name.forEach(skill_name=> { %>
-                <div class="skills">
-                    <div class="details">
-                        <span><%- skill_name%></span>
-                    </div>
-                    <div class="bar">
-                        <div id="<%- skill_name%>-bar"></div>
-                    </div>
+                <div class="texts">
+                    <h2><%- DATA.USER.ACTIVITY.TYPE %> <%- DATA.USER.ACTIVITY.NAME %></h2>
+                    <h3 style="margin-top: -20px;"><%- DATA.USER.ACTIVITY.STATE %></h3>
+                    <h4 style="margin-top: -20px;"><%- DATA.USER.ACTIVITY.DETAILS %></h4>
                 </div>
-            <% }) %>
-
-            <hr>
-
-            <div class="social-buttons">
-                <a class="social-buttons" href="<%- config.left.social.github %>" target="_blank" ><i class="fab fa-github-square"></i></a>
-                <a class="social-buttons" href="<%- config.left.social.discord %>" target="_blank"><i class="fab fa-discord"></i></a>
-                <a class="social-buttons" href="<%- config.left.social.instagram %>" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="social-buttons" href="<%- config.left.social.telegram %>" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a class="social-buttons" href="tel:<%- config.left.social.phone %>" target="_blank"><i class="fas fa-phone"></i></a>
-                <a class="social-buttons" href="mailto:<%- config.left.social.email %>" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
 
-            <hr>
-
-            <div class="repo-dn">
-                <a class="repo-dn" href="https://github.com/hadiazt/hadi-az.me/archive/refs/heads/main.zip" target="_blank">
-                    <i class="fas fa-download"></i>                    
-                    <span>دانلود قالب</span>
-                </a>
-            </div> 
-
         </div>
-    </div>
+        <div class="right-down">
+            کیر کص کون :|
+        </div>
 
-    <div class="right-up"></div>
-    <div class="right-down"></div>
+
 
 </body>
 
