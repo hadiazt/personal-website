@@ -1,0 +1,22 @@
+{
+    "USER": {
+        "INFO": {
+            "NAME": "零 hadi ZΞЯØ",
+            "STATUS": "online",
+            "AVATAR": "https://cdn.discordapp.com/avatars/490519932292038659/32b9053cd56f8d44c5199195a65087e3.jpg?size=2048",
+            "CUSTOM_STATUS": "N/A"
+        },
+        "ACTIVITY": {
+            "TYPE": "PLAYING",
+            "NAME": "Visual Studio Code",
+            "STATE": "N/A",
+            "DETAILS": "☕ AFK",
+            "ASSETS": {
+                "SMALLIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565945770067623946.jpg?size=2048",
+                "SMALLTEXT": "Visual Studio Code",
+                "LARGEIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565945768817590282.jpg?size=2048",
+                "LARGETEXT": "AFK"
+            }
+        }
+    }
+}
