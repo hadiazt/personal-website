@@ -81,6 +81,10 @@ hr{
     color: #8c8c8e;
     text-align: center;
 }
+.description-infos{
+    margin-top: -10px;
+    font-size: 13px;
+}
 .description{
     padding: 20px;
     margin-top: -16px;
@@ -91,7 +95,8 @@ hr{
     scrollbar-width: none;
 }
 .social-buttons{
-    font-size: 15px;
+    font-size: 20px;
+    text-align: center;
     color: #8c8c8e;
     text-decoration: none;
 }

@@ -57,11 +57,12 @@
         </div>
         <div class="description">
 
-            <p style="margin-top: -10px;">
-                <span>ملیت : <%- config.left.country %></span></br>
-                <span>شهر : <%- config.left.city %></span></br>
-                <span><%- config.left.age %> : سن</span></br>
+            <p class="description-infos">
+                <span style="float:right;">: ملیت</span><span class="infos" ><%- config.left.country %></span></br>
+                <span style="float:right;">: شهر</span><span class="infos"><%- config.left.city %></span></br>
+                <span style="float:right;">: سن</span><span class="infos"><%- config.left.age %></span></br>
             </p>
+            
             <hr>
 
             <% config.left.langs_name.forEach(lang_name=> { %>
@@ -87,11 +88,15 @@
                 </div>
             <% }) %>
 
-
             <hr>
 
             <div class="social-buttons">
-                <i class="fab fa-discord"></i>
+                <a class="social-buttons"  href="https://github.com/hadiazt" target="_blank" ><i class="fab fa-github-square"></i></a>
+                <a class="social-buttons" href="https://discords.com/bio/p/hadiaz" target="_blank"><i class="fab fa-discord"></i></a>
+                <a class="social-buttons" href="tel:+989036812503" target="_blank"><i class="fas fa-phone"></i></a>
+                <a class="social-buttons" href="https://instagram.com/hadi._.azt" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social-buttons" href="https://t.me/hadiazt" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a class="social-buttons" href="mailto:azarihadi81@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
 
             <hr>
