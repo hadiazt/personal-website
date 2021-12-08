@@ -3,19 +3,18 @@
         "INFO": {
             "NAME": "零 hadi ZΞЯØ",
             "STATUS": "online",
-            "AVATAR": "https://cdn.discordapp.com/avatars/490519932292038659/32b9053cd56f8d44c5199195a65087e3.jpg?size=2048",
-            "CUSTOM_STATUS": "N/A"
+            "AVATAR": "https://cdn.discordapp.com/avatars/490519932292038659/2b3c90aea915b8fbcb21af0093bacc53.jpg?size=2048"
         },
         "ACTIVITY": {
-            "TYPE": "PLAYING",
-            "NAME": "Visual Studio Code",
-            "STATE": "N/A",
-            "DETAILS": "☕ AFK",
+            "TYPE": "LISTENING",
+            "NAME": "Spotify",
+            "STATE": "Sasha Alex Sloan",
+            "DETAILS": "Lie",
             "ASSETS": {
-                "SMALLIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565945770067623946.jpg?size=2048",
-                "SMALLTEXT": "Visual Studio Code",
-                "LARGEIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565945768817590282.jpg?size=2048",
-                "LARGETEXT": "AFK"
+                "SMALLIMAGEURL": "https://icons.veryicon.com/png/o/miscellaneous/unicons/n-a.png",
+                "SMALLTEXT": null,
+                "LARGEIMAGEURL": "https://i.scdn.co/image/ab67616d0000b2731e4429a14d693b418b198056",
+                "LARGETEXT": "Only Child"
             }
         }
     }
