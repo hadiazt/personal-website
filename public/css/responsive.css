@@ -1,0 +1,107 @@
+@media (max-width: 1300px) {
+    .description {
+        max-height: 59.1vh;
+    }
+
+    .right-up {
+        height: 30.9vh;
+    }
+
+    .right-down {
+        height: 64vh;
+        max-height: 64vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    .left {
+        width: 100%;
+        height: 20vh;
+        float: none;
+    }
+
+    .header {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .description {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .right-up {
+        margin-left: 0;
+        margin-top: 610px;
+        width: 100%;
+        height: 35vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .right-down {
+        width: 100%;
+        margin: 0;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .repo-dn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .image-right {
+        margin: 0px auto 0 auto;
+    }
+
+    .acc-info {
+        float: none;
+    }
+
+    .images {
+        float: none;
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+
+    .large_image {
+        height: 150px;
+        width: 150px;
+        border-radius: 25px;
+        padding: 20px;
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+
+    .small_image {
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+
+    .texts {
+        text-align: center;
+        padding: 0;
+    }
+
+    .right-up {
+        height: 85vh;
+    }
+
+    .dis {
+        margin: -20px 0 -10px 10px;
+    }
+    .dis{
+        text-align: center;
+        margin: 0;
+    }
+    .of{
+        text-align: center;
+        margin: 0;
+    }
+}
+@media (max-width: 400px) {
+    .right-up {
+        height: 80vh;
+    }
+}
