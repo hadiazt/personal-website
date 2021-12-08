@@ -25,10 +25,10 @@
 #CSS-bar{
     animation: CSS 2s forwards;
 }
-#JavaScript_Front-End-bar{
+#JavaScript-bar{
     animation:JS-FRONT-END 2s forwards
 }
-#JavaScript_Back-End-bar{
+#NodeJS-bar{
     animation:JS-BACK-END 2s forwards
 }
 #TypeScript-bar{
