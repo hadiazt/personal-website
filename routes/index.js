@@ -17,48 +17,13 @@ client.on("ready", async () => {
         const user = client.users.cache.get(db.get('BOT').USER)
 
         if (user.presence.activities[0]) {
-            if (user.presence.activities[0].type === 'CUSTOM_STATUS') {
-                if (user.presence.activities[1]) {
-                    API.clear()
-                    var API_VALUE = {
-                        'INFO': {
-                            'NAME': user.username,
-                            'STATUS': user.presence.status || 'N/A',
-                            'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
-                            'CUSTOM_STATUS': user.presence.activities[0].state || 'N/A',
-                        },
-                        'ACTIVITY': {
-                            'TYPE': user.presence.activities[1].type || 'N/A',
-                            'NAME': user.presence.activities[1].name || 'N/A',
-                            'STATE': user.presence.activities[1].state || 'N/A',
-                            'DETAILS': user.presence.activities[1].details || 'N/A',
-                            'ASSETS': {
-                                'SMALLIMAGEURL': user.presence.activities[1].assets.smallImageURL({ size: 2048, format: 'jpg' }) || 'https://icons.veryicon.com/png/o/miscellaneous/unicons/n-a.png',
-                                'SMALLTEXT': user.presence.activities[1].assets.smallText,
-                                'LARGEIMAGEURL': user.presence.activities[1].assets.largeImageURL({ size: 2048, format: 'jpg' }) || 'https://icons.veryicon.com/png/o/miscellaneous/unicons/n-a.png',
-                                'LARGETEXT': user.presence.activities[1].assets.largeText,
-                            }
-                        },
-                    }
-                } else {
-                    API.clear()
-                    var API_VALUE = {
-                        'INFO': {
-                            'NAME': user.username,
-                            'STATUS': user.presence.status,
-                            'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
-                            'CUSTOM_STATUS': user.presence.activities[0].state || 'N/A',
-                        }
-                    }
-                }
-            } else {
+            if (user.presence.activities[0] !== 'CUSTOM_STATUS') {
                 API.clear()
                 var API_VALUE = {
                     'INFO': {
                         'NAME': user.username,
                         'STATUS': user.presence.status || 'N/A',
                         'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
-                        'CUSTOM_STATUS': user.presence.activities[0].state || 'N/A',
                     },
                     'ACTIVITY': {
                         'TYPE': user.presence.activities[0].type || 'N/A',
@@ -73,7 +38,7 @@ client.on("ready", async () => {
                         }
                     },
                 }
-            }
+            }            
         } else {
             API.clear()
             var API_VALUE = {
@@ -81,7 +46,6 @@ client.on("ready", async () => {
                     'NAME': user.username,
                     'STATUS': user.presence.status || 'N/A',
                     'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
-                    'CUSTOM_STATUS': 'N/A',
                 }
             }
         }
