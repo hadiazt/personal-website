@@ -5,7 +5,7 @@
     },
     "page": {
         "title": "هادی آذری",
-        "icon": "https://cdn.discordapp.com/avatars/490519932292038659/7358bb9b08d9c370418db291e28c8082.png?size=4096",
+        "icon": "https://cdn.discordapp.com/avatars/750337293927055452/b3f70abd1a17ad3a1857aff25406f1af.png?size=4096",
         "meta": {
             "color": "#0075d5",
             "content": "NODE.JS DEV && UI/UX Designer"
@@ -13,7 +13,7 @@
     },
     "left": {
         "name": "هادی",
-        "imglink": "https://cdn.discordapp.com/avatars/490519932292038659/7358bb9b08d9c370418db291e28c8082.png?size=4096",
+        "imglink": "https://cdn.discordapp.com/avatars/750337293927055452/b3f70abd1a17ad3a1857aff25406f1af.png?size=4096",
         "country": "ایران",
         "city": "رشت",
         "age": "18",
@@ -30,8 +30,8 @@
         "skills_name": [
             "HTML",
             "CSS",
-            "JavaScript_Front-End",
-            "JavaScript_Back-End",
+            "JavaScript",
+            "NodeJS",
             "TypeScript",
             "CSS3",
             "PHP",
