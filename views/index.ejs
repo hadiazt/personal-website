@@ -61,14 +61,14 @@
         <div class="description">
 
             <p class="description-infos">
-                <span style="float:right;">: ملیت</span><span class="infos">
-                    <%- config.left.country %>
+                <span style="float:right;"><%- config.left.country %></span><span class="infos">                    
+                    NATIONALITY :
                 </span></br>
-                <span style="float:right;">: شهر</span><span class="infos">
-                    <%- config.left.city %>
+                <span style="float:right;"><%- config.left.city %></span><span class="infos">                
+                    CITY : 
                 </span></br>
-                <span style="float:right;">: سن</span><span class="infos">
-                    <%- config.left.age %>
+                <span style="float:right;"><%- config.left.age %></span><span class="infos">
+                    AGE :
                 </span></br>
             </p>
 
@@ -124,8 +124,8 @@
                                 <a class="repo-dn"
                                     href="https://github.com/hadiazt/hadi-az.me/archive/refs/heads/main.zip"
                                     target="_blank">
+                                    <span>Download Template</span>                                
                                     <i class="fas fa-download"></i>
-                                    <span>دانلود قالب</span>
                                 </a>
                             </div>
 
@@ -190,11 +190,81 @@
             </div>
         <% } %>
         
-<!-- // user is offline  -->
 
     </div>
     <div class="right-down">
-        کیر کص کون :|
+           
+        <div class="project-cards">
+
+            <div class="card">
+                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
+                <div class="card-body">
+                    <div class="card-txt">
+                        <span>NAME</span></br>
+                        <span>ROLE</span></br>
+                        <span>DES</span></br>
+                    </div>
+                    <a href="https://github.com/" target="follow">VIEW</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
+                <div class="card-body">
+                    <div class="card-txt">
+                        <span>NAME</span></br>
+                        <span>ROLE</span></br>
+                        <span>DES</span></br>
+                    </div>
+                    <a href="https://github.com/" target="follow">VIEW</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
+                <div class="card-body">
+                    <div class="card-txt">
+                        <span>NAME</span></br>
+                        <span>ROLE</span></br>
+                        <span>DES</span></br>
+                    </div>
+                    <a href="https://github.com/" target="follow">VIEW</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
+                <div class="card-body">
+                    <div class="card-txt">
+                        <span>NAME</span></br>
+                        <span>ROLE</span></br>
+                        <span>DES</span></br>
+                    </div>
+                    <a href="https://github.com/" target="follow">VIEW</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
+                <div class="card-body">
+                    <div class="card-txt">
+                        <span>NAME</span></br>
+                        <span>ROLE</span></br>
+                        <span>DES</span></br>
+                    </div>
+                    <a href="https://github.com/" target="follow">VIEW</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <% config.right.PROJECTS.forEach(PROJECT => { %>
+
+        <% }) %>
+
     </div>
 
 
