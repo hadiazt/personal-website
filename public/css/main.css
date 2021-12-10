@@ -39,7 +39,9 @@ body{
 hr{
     border:  1px solid #454552;
 }
-
+.aviny {
+    font-family: 'aviny';
+}
 .left{
     width: 17%;
     height: 95vh;
@@ -53,6 +55,7 @@ hr{
     height: 37vh;
 }
 .right-down{
+    text-align: right;
     border-radius: 0 0 20px 0;
     background-color:#20202a;
     margin-left: 17%;
@@ -105,7 +108,7 @@ hr{
 }
 .repo-dn{
     font-size: 15px;
-    text-align: left;
+    text-align: right;
     color: #8c8c8e;
     text-decoration: none;
 }
@@ -129,12 +132,14 @@ hr{
 }
 .dis{
 padding: 10px;
+text-align: right;
 }
 .discord{
     margin: -20px 0 50px 0;
 }
 .of{
-    margin-left: 50px;
+    margin-right: 250px;
+    text-align: right;
 }
 .images{
     float: left;
@@ -157,6 +162,21 @@ text-align: left;
     background-color:#fff
 }
 /*  */
+.nav{
+    background-color:#191923;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px 25% 0 25%;
+    display: block;    
+}
+.nav-item{
+    background-color: #212324;
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    border-radius:10px;
+}
+/*  */
 .project-cards {
     text-align: center;
     justify-content: center;
@@ -164,13 +184,13 @@ text-align: left;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    /* margin-left: 200px; */
 }
 .card {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background-color: #212324;
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
+    height:40vh;
 }
 .card:hover{
 	transform: translateY(-5px);
@@ -178,8 +198,16 @@ text-align: left;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .card-img{
-    width:40vh;
-    height: 20vh;
-    border-radius: 10px;
-
+    padding: 10px;
+    width:10vh;
+    height: 10vh;
+    /* border-radius: 10px; */
+}
+.viewbtn{
+    margin-top: 20px;
+    background-color:#57F287;
+    padding: 5px;
+    border-radius:10px;
+    color:#fff;
+    text-decoration: none;
 }
