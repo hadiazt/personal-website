@@ -45,13 +45,55 @@
     .repo-dn {
         text-align: center;
     }
+
+    .extra {
+        margin: 0 5% 0 5%;
+    }
+
+    .nav {
+        margin: 10px 10% 0 10%;
+    }
 }
+
+@media (max-width: 900px) {
+    .gitres {
+        width: 90vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .gitres {
+        width: 80vh;
+    }
+
+    .nav {
+        margin: 10px 10% 0 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .gitres {
+        width: 70vh;
+    }
+
+    .nav {
+        margin: 10px 10% 0 10%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .gitres {
+        width: 60vh;
+    }
+}
+
 
 @media (max-width: 500px) {
 
     .image-right {
         margin: 0px auto 0 auto;
-        float:none;
+        float: none;
     }
 
     .acc-info {
@@ -91,21 +133,37 @@
 
     .dis {
         margin: -20px 0 -10px 10px;
-    }
-    .dis{
         text-align: center;
         margin: 0;
     }
-    .of{
+
+    .of {
         text-align: center;
         margin: 0;
+    }
+
+    .gitres {
+        width: 50vh;
     }
 }
+
 @media (max-width: 400px) {
     .right-up {
         height: 105vh;
     }
-    .card{
-        height:45vh;
+
+    .card {
+        height: 45vh;
     }
+
+    .gitres {
+        width: 40vh;
+    }
+
+    .nav-item {
+        text-align: center;
+        display: flex;
+        margin: 10px 0 10px 0;
+    }
+
 }
