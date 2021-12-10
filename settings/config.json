@@ -5,7 +5,7 @@
     },
     "page": {
         "title": "هادی آذری",
-        "icon": "https://cdn.discordapp.com/avatars/750337293927055452/b3f70abd1a17ad3a1857aff25406f1af.png?size=4096",
+        "icon": "/img/hadi.png",
         "meta": {
             "color": "#0075d5",
             "content": "NODE.JS DEV && UI/UX Designer"
@@ -13,7 +13,7 @@
     },
     "left": {
         "name": "هادی",
-        "imglink": "https://cdn.discordapp.com/attachments/802560816426516531/918801077602758666/fe3acaa8e5b859e70207ce04432314cf.png",
+        "imglink": "/img/hadi.png",
         "country": "ایران",
         "city": "رشت",
         "age": "18",
@@ -53,7 +53,7 @@
                 "ROLE": "FOUNDER",
                 "DES": "You Can Get Random Gif/Pictures URSL With This Module",
                 "URL": "https://github.com/random-pic-js",
-                "IMG":"https://avatars.githubusercontent.com/u/91777872?s=400&u=eb19f34d8815cec997e86d57f71e31f419bb7c18&v=4"
+                "IMG":"/img/rpjs.png"
             },
             {
                 "NAME": "EFFECTS-IMAGE.JS",
@@ -67,21 +67,28 @@
                 "ROLE": "DEVELOPER",
                 "DES": "Persian Music & Video Player With Discord RPC",
                 "URL": "https://github.com/Nava-ORG",
-                "IMG":"https://avatars.githubusercontent.com/u/93713554?s=400&u=678320ff0aa627252796315c53ce20c27d4e04a7&v=4"
+                "IMG":"/img/nava.png"
             },
             {
                 "NAME": "SETAR",
                 "ROLE": "DEVELOPER",
                 "DES": "Discord Professional Music Bot",
                 "URL": "https://github.com/SeTar-Bot",
-                "IMG":"https://avatars.githubusercontent.com/u/69255757?s=400&u=e8ba151e69a04a44949561a71313163745bd9b84&v=4"
+                "IMG":"/img/setar.png"
             },
             {
                 "NAME": "PARAFFIN",
                 "ROLE": "STAFF",
                 "DES": "رسانه ای مرجع برای یادگیری , یاد دادن و کسب در آمد",
                 "URL": "https://paraffin-tutorials.ir/",
-                "IMG":"https://avatars.githubusercontent.com/u/95228501?s=200&v=4"
+                "IMG":"/img/paraffin.png"
+            },
+            {
+                "NAME": "ELITE",
+                "ROLE": "DEVELOPER",
+                "DES":"وبسایت شرکت الایت تیم برنامه نویسی ربات های دیسکورد با ۲ بات وریفای شده رسمی دیسکورد",
+                "URL":"",
+                "IMG":"img/elite.png"
             }
         ]
     }
