@@ -61,14 +61,14 @@
         <div class="description">
 
             <p class="description-infos">
-                <span style="float:right;"><%- config.left.country %></span><span class="infos">                    
-                    NATIONALITY :
+                <span style="float:right;">: ملیت</span><span class="infos">                    
+                    <%- config.left.country %>
                 </span></br>
-                <span style="float:right;"><%- config.left.city %></span><span class="infos">                
-                    CITY : 
+                <span style="float:right;">: شهر</span><span class="infos">                
+                    <%- config.left.city %> 
                 </span></br>
-                <span style="float:right;"><%- config.left.age %></span><span class="infos">
-                    AGE :
+                <span style="float:right;">: سن</span><span class="infos">
+                    <%- config.left.age %>
                 </span></br>
             </p>
 
@@ -124,7 +124,7 @@
                                 <a class="repo-dn"
                                     href="https://github.com/hadiazt/hadi-az.me/archive/refs/heads/main.zip"
                                     target="_blank">
-                                    <span>Download Template</span>                                
+                                    <span>دانلود قالب</span>                                
                                     <i class="fas fa-download"></i>
                                 </a>
                             </div>
@@ -158,12 +158,13 @@
 
         </div>
 
-        <p class='dis'><a class='repo-dn' style='color:#fff' href="https://discord.com" target="_blank">Discord</a>
-            Activity</p>
+        <p class='dis'>فعالیت
+            <a class='repo-dn' style='color:#fff;text-decoration: underline #fff;' href="https://discord.com" target="_blank">دیسکورد</a>
+        </p>
 
         <% if (DATA.USER.INFO.STATUS === 'offline') { %>
             <div class="of">
-                USER IS OFFLINE
+                کاربر آفلاین میباشد
             </div>
         <% } else if (DATA.USER.ACTIVITY) { %>
             <div class="discord">
@@ -186,84 +187,40 @@
             </div>
         <% } else { %>
             <div class="of">
-                NO ACTIVITY FOUND
+                فعالیتی یافت نشد
             </div>
         <% } %>
         
 
     </div>
+
     <div class="right-down">
-           
-        <div class="project-cards">
-
-            <div class="card">
-                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
-                <div class="card-body">
-                    <div class="card-txt">
-                        <span>NAME</span></br>
-                        <span>ROLE</span></br>
-                        <span>DES</span></br>
-                    </div>
-                    <a href="https://github.com/" target="follow">VIEW</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
-                <div class="card-body">
-                    <div class="card-txt">
-                        <span>NAME</span></br>
-                        <span>ROLE</span></br>
-                        <span>DES</span></br>
-                    </div>
-                    <a href="https://github.com/" target="follow">VIEW</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
-                <div class="card-body">
-                    <div class="card-txt">
-                        <span>NAME</span></br>
-                        <span>ROLE</span></br>
-                        <span>DES</span></br>
-                    </div>
-                    <a href="https://github.com/" target="follow">VIEW</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
-                <div class="card-body">
-                    <div class="card-txt">
-                        <span>NAME</span></br>
-                        <span>ROLE</span></br>
-                        <span>DES</span></br>
-                    </div>
-                    <a href="https://github.com/" target="follow">VIEW</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img class="card-img" src="https://repository-images.githubusercontent.com/412778299/bed7ebe1-acf9-4e65-b344-8e0330a20ee7">
-                <div class="card-body">
-                    <div class="card-txt">
-                        <span>NAME</span></br>
-                        <span>ROLE</span></br>
-                        <span>DES</span></br>
-                    </div>
-                    <a href="https://github.com/" target="follow">VIEW</a>
-                </div>
-
-            </div>
-
+        <div class="nav aviny">
+            <span class="nav-item">درباره من</span>
+            <span class="nav-item">پروژها</span>
+            <span class="nav-item">اطلاعات جالب</span>
+            <span class="nav-item">آ</span>
         </div>
 
-        <% config.right.PROJECTS.forEach(PROJECT => { %>
+        <h1 style="margin: 20px;" class="aviny">: پروژها</h1>
+        <div class="project-cards">
+            <% config.right.PROJECTS.forEach(PROJECT => { %>
+                <div class="card">
+                    <img class="card-img" src="<%- PROJECT.IMG %>">
+                    <div class="card-body">
+                        <div class="card-txt">
+                            <span><%- PROJECT.NAME %></span></br>
+                            <span style="font-size: x-small; color: #8c8c8e;"><%- PROJECT.ROLE %></span></br></br>
+                            <span style="padding: 10px;"><%- PROJECT.DES %></span></br></br>
+                        </div>
+                        <a class="viewbtn aviny"  href="<%- PROJECT.URL %>" target="follow">مشاهده</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        <a style="color:#fff;text-decoration: underline #fff;" target="_blank" href="<%- config.left.social.github %>"><h4 style="margin: 20px;"><i class="fas fa-long-arrow-alt-left"></i> برای بیشتر کلیک کنید</h4></a>
 
-        <% }) %>
+
 
     </div>
 
