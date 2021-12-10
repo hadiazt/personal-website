@@ -1,7 +1,7 @@
 {
     "BOT": {
-        "USER": "USERID",
-        "TOKEN": "BOTTOKEN"
+        "USER": "",
+        "TOKEN": ""
     },
     "page": {
         "title": "هادی آذری",
@@ -87,8 +87,8 @@
                 "NAME": "ELITE",
                 "ROLE": "DEVELOPER",
                 "DES":"وبسایت شرکت الایت تیم برنامه نویسی ربات های دیسکورد با ۲ بات وریفای شده رسمی دیسکورد",
-                "URL":"",
-                "IMG":"img/elite.png"
+                "URL":"https://github.com/im-parsa/elite-website",
+                "IMG":"/img/elite.png"
             }
         ]
     }
