@@ -1,0 +1,88 @@
+{
+    "BOT": {
+        "USER": "USERID",
+        "TOKEN": "BOTTOKEN"
+    },
+    "page": {
+        "title": "هادی آذری",
+        "icon": "https://cdn.discordapp.com/avatars/750337293927055452/b3f70abd1a17ad3a1857aff25406f1af.png?size=4096",
+        "meta": {
+            "color": "#0075d5",
+            "content": "NODE.JS DEV && UI/UX Designer"
+        }
+    },
+    "left": {
+        "name": "هادی",
+        "imglink": "https://cdn.discordapp.com/attachments/802560816426516531/918801077602758666/fe3acaa8e5b859e70207ce04432314cf.png",
+        "country": "ایران",
+        "city": "رشت",
+        "age": "18",
+        "abilities": [
+            "NODE.JS Developer",
+            "UI/UX Designer",
+            "Application & Bot Developer"
+        ],
+        "langs_name": [
+            "PERSIAN",
+            "ENGLISH",
+            "KOREAN"
+        ],
+        "skills_name": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "NodeJS",
+            "TypeScript",
+            "CSS3",
+            "PHP",
+            "CSHARP"
+        ],
+        "social": {
+            "github": "https://github.com/hadiazt",
+            "discord": "https://discords.com/bio/p/hadiaz",
+            "instagram": "https://instagram.com/hadi._.azt",
+            "telegram": "https://t.me/hadiazt",
+            "phone": "+989036812503",
+            "email": "azarihadi81@gmail.com"
+        }
+    },
+    "right": {
+        "PROJECTS": [
+            {
+                "NAME": "RANDOM-PIC.JS",
+                "ROLE": "FOUNDER",
+                "DES": "You Can Get Random Gif/Pictures URSL With This Module",
+                "URL": "https://github.com/random-pic-js",
+                "IMG":"https://avatars.githubusercontent.com/u/91777872?s=400&u=eb19f34d8815cec997e86d57f71e31f419bb7c18&v=4"
+            },
+            {
+                "NAME": "EFFECTS-IMAGE.JS",
+                "ROLE": "FOUNDER",
+                "DES": "A simple module to add effects to your pictures",
+                "URL": "https://github.com/hadiazt/effects-image.js",
+                "IMG":"https://icons.veryicon.com/png/o/miscellaneous/unicons/n-a.png"
+            },
+            {
+                "NAME": "NAVA PALYER",
+                "ROLE": "DEVELOPER",
+                "DES": "Persian Music & Video Player With Discord RPC",
+                "URL": "https://github.com/Nava-ORG",
+                "IMG":"https://avatars.githubusercontent.com/u/93713554?s=400&u=678320ff0aa627252796315c53ce20c27d4e04a7&v=4"
+            },
+            {
+                "NAME": "SETAR",
+                "ROLE": "DEVELOPER",
+                "DES": "Discord Professional Music Bot",
+                "URL": "https://github.com/SeTar-Bot",
+                "IMG":"https://avatars.githubusercontent.com/u/69255757?s=400&u=e8ba151e69a04a44949561a71313163745bd9b84&v=4"
+            },
+            {
+                "NAME": "PARAFFIN",
+                "ROLE": "STAFF",
+                "DES": "رسانه ای مرجع برای یادگیری , یاد دادن و کسب در آمد",
+                "URL": "https://paraffin-tutorials.ir/",
+                "IMG":"https://avatars.githubusercontent.com/u/95228501?s=200&v=4"
+            }
+        ]
+    }
+}
