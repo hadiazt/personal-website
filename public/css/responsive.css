@@ -51,6 +51,7 @@
 
     .image-right {
         margin: 0px auto 0 auto;
+        float:none;
     }
 
     .acc-info {
@@ -102,6 +103,9 @@
 }
 @media (max-width: 400px) {
     .right-up {
-        height: 80vh;
+        height: 105vh;
+    }
+    .card{
+        height:45vh;
     }
 }
