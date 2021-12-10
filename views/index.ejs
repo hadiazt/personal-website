@@ -38,6 +38,10 @@
     </link>
     <link rel="stylesheet" href="/css/bars.css">
     </link>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     <script src="https://kit.fontawesome.com/31fd7c4de0.js" crossorigin="anonymous"></script>
 
@@ -196,13 +200,13 @@
 
     <div class="right-down">
         <div class="nav aviny">
-            <span class="nav-item">درباره من</span>
-            <span class="nav-item">پروژها</span>
-            <span class="nav-item">اطلاعات جالب</span>
-            <span class="nav-item">آ</span>
+            <a class="nav-item" href="#projects"><span>پروژها</span></a>
+            <a class="nav-item" href="#git"><span>مشخصات گیت هاب</span></a>
+            <a class="nav-item" href="#extra"><span>اطلاعات اضافه</span></a>
         </div>
 
-        <h1 style="margin: 20px;" class="aviny">: پروژها</h1>
+
+        <h1 id="projects" style="margin: 20px;" class="aviny">: پروژها</h1>
         <div class="project-cards">
             <% config.right.PROJECTS.forEach(PROJECT => { %>
                 <div class="card">
@@ -220,7 +224,36 @@
         </div>
         <a style="color:#fff;text-decoration: underline #fff;" target="_blank" href="<%- config.left.social.github %>"><h4 style="margin: 20px;"><i class="fas fa-long-arrow-alt-left"></i> برای بیشتر کلیک کنید</h4></a>
 
+        <h1 id="git" style="margin: 20px;" class="aviny">: اطلاعات جالب</h1>
 
+        <div class="git">
+            </br><img src="https://camo.githubusercontent.com/0ee8b9773d950f3c13fd0f442d6274998934716d078e1885dd2b89abc6e7e1d6/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f68616469617a742f636f756e742e737667" /></br>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hadiazt&langs_count=10&layout=compact&theme=gruvbox_duo&hide_border=true&bg_color=171717&title_color=5459a7&icon_color=5459a7&text_color=ffffff&count_private=true" class="gitres" /></br>
+            <img src="https://github-readme-stats.vercel.app/api?username=hadiazt&theme=gruvbox_duo&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=171717&title_color=5459a7&icon_color=5459a7&text_color=ffffff&count_private=true" class="gitres" /></br>
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=hadiazt&theme=gruvbox_duo&background=171717&hide_border=true&ring=5459a7&currStreakLabel=5459a7&sideNums=5459a7&currStreakNum=5459a7&sideLabels=5459a7&text_color=ffffff&count_private=true" class="gitres" /></br>
+            <img src="https://activity-graph.herokuapp.com/graph?username=hadiazt&custom_title=hadiazt's%20Contribution%20Graph&bg_color=171717&color=5459a7&line=FFFFFF&point=5459a7&hide_border=F84C4C&count_private=true" class="gitres" /></br>
+        </div>
+        </br>
+
+        <h1 id="extra" style="margin: 20px;" class="aviny">: اطلاعات اضافه</h1>
+
+            <pre><code style="background-color: #212324; text-align: left;" class="language-js extra">
+const FunyFacts = {
+    KPOP: true,
+    TikTok: true,
+    YouTube: true,
+    WatchingKDrama: true,
+    TVSeries: false,
+    "Operating System":"windows",
+    LANGUES: [ ENGLISH, PERSIAN, KOREAN ]
+}
+const friendDB = require('FRIENDS.json');
+var friend = friendDB.all()
+             
+    if(friend.ignored.me) {
+        friendDB.remove(friend)
+    }             
+        </code></pre></br>
 
     </div>
 
