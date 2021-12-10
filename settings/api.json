@@ -4,6 +4,18 @@
             "NAME": "零 hadi ZΞЯØ",
             "STATUS": "online",
             "AVATAR": "https://cdn.discordapp.com/avatars/490519932292038659/2b3c90aea915b8fbcb21af0093bacc53.jpg?size=2048"
+        },
+        "ACTIVITY": {
+            "TYPE": "PLAYING",
+            "NAME": "Visual Studio Code",
+            "STATE": "📂 hadi-az.me",
+            "DETAILS": "📝main.css",
+            "ASSETS": {
+                "SMALLIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565945770067623946.jpg?size=2048",
+                "SMALLTEXT": "Visual Studio Code",
+                "LARGEIMAGEURL": "https://cdn.discordapp.com/app-assets/383226320970055681/565944082585878538.jpg?size=2048",
+                "LARGETEXT": "Editing a CSS file"
+            }
         }
     }
 }
