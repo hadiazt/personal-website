@@ -1,7 +1,7 @@
 {
     "BOT": {
-        "USER": "",
-        "TOKEN": ""
+        "USER": "USERID",
+        "TOKEN": "BOTTOKEN"
     },
     "page": {
         "title": "هادی آذری",
