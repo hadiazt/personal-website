@@ -1,13 +1,13 @@
 {
     "BOT": {
-        "USER": "USERID",
-        "TOKEN": "BOTTOKEN"
+        "USER": "490519932292038659",
+        "TOKEN": ""
     },
     "page": {
         "title": "هادی آذری",
         "icon": "/img/hadi.png",
         "meta": {
-            "color": "#0075d5",
+            "color": "#5459a7",
             "content": "NODE.JS DEV && UI/UX Designer"
         }
     },

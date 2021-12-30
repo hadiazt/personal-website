@@ -17,7 +17,15 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //* Routes
 app.use("/", require("./routes/index.js"))
+app.use("/blog", require("./routes/blog.js"))
 
+app.use(function(req, res, next) {
+    res.status(500).send({
+        status: 500,
+        message: 'internal error',
+        type: 'internal'
+    })
+ })
 
 const PORT = process.env.PORT || 3000;
 

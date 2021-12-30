@@ -8,7 +8,7 @@ const API = new Database('./settings/api.json');
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-client.login(db.get('BOT').TOKEN)
+client.login(db.get('BOT').TOKEN || process.env.TOKEN)
 
 client.on("ready", async () => {
     console.log('CONNETED TO : ' + client.user.tag);
@@ -16,8 +16,8 @@ client.on("ready", async () => {
     setInterval(() => {
         const user = client.users.cache.get(db.get('BOT').USER)
 
-        if (user.presence.activities[0]) {
-            if (user.presence.activities[0] !== 'CUSTOM_STATUS') {
+        if (user.presence.activities[0] !== 'CUSTOM_STATUS') {
+            if (user.presence.activities[0] && user.presence.activities[0].assets) {
                 API.clear()
                 var API_VALUE = {
                     'INFO': {
@@ -38,21 +38,24 @@ client.on("ready", async () => {
                         }
                     },
                 }
-            }            
-        } else {
-            API.clear()
-            var API_VALUE = {
-                'INFO': {
-                    'NAME': user.username,
-                    'STATUS': user.presence.status || 'N/A',
-                    'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
+            } else {
+                API.clear()
+                var API_VALUE = {
+                    'INFO': {
+                        'NAME': user.username,
+                        'STATUS': user.presence.status || 'N/A',
+                        'AVATAR': user.displayAvatarURL({ size: 2048, format: 'jpg' }),
+                    }
                 }
             }
+
         }
+
+
         API.set('USER', API_VALUE)
         console.log('API PATH DATA UPDATED');
 
-    }, 6000);
+    }, 1000);
 })
 
 router.get("/", (req, res) => {
