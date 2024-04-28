@@ -17,7 +17,7 @@ const expertise = [
   {
     id: 3,
     title: "X",
-    desc,
+    desc: "",
   },
   {
     id: 4,
