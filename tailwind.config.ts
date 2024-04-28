@@ -20,6 +20,8 @@ export default {
         Snow: "#ffffff",
       },
       fontFamily: {
+        IR_Aviny: "IR-Aviny",
+        IR_Sans: "IR-Sans",
         "cascadia-normal": ["cascadia-normal"],
         circular: ["circular-normal", "sans-serif"],
         "circular-light": ["circular-light", "sans-serif"],

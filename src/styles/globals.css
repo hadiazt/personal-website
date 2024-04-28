@@ -26,6 +26,14 @@ body {
     }
 
     @font-face {
+      font-family: "IR-SANS";
+      src: url(../public/fonts/IRANSansWeb.ttf);
+    }
+    @font-face {
+      font-family: "IR-Aviny";
+      src: url(../public/fonts/aviny.ttf);
+    }
+    @font-face {
       font-family: "cascadia-normal";
       src: url(../public/fonts/Cascadia.ttf);
     }
