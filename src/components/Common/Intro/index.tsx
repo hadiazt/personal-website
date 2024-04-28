@@ -11,7 +11,7 @@ import { Skills } from "./Skills";
 import { Contact } from "./Contact";
 import { Location } from "./Location";
 import { Languages } from "./Languages";
-import Hadi from "../../../public/images/hadi.jpg";
+import Hadi from "../../../public/Hadi.jpg";
 import { NAME, DESIGNATION, SOCIAL_LINKS } from "../../../constants/constants";
 
 export const Intro = () => {
