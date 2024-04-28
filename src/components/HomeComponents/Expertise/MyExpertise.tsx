@@ -8,7 +8,7 @@ export const MyExpertise = () => {
     axios
       .get("api/expertise")
       .then(({ data }) => data)
-      .catch((error) => console.error("Error fetching testimonials:", error))
+      .catch((error) => console.error("Error fetching :", error))
   );
 
   return (

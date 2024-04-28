@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
+import { ReviewCard } from "./GitRepos/ReviewCard";
 import { ParagraphSkeleton } from "../Common/ParagraphSkeleton";
-import ReviewCard from "./GitRepos/ReviewCard";
 
 export const GitRepos = () => {
   var {
@@ -14,7 +14,7 @@ export const GitRepos = () => {
       axios
         .get("https://api.github.com/users/hadiazt/repos")
         .then(({ data }) => data)
-        .catch((error) => console.error("Error fetching testimonials:", error))
+        .catch((error) => console.error("Error fetching :", error))
   );
 
   const TOPRepos = data?.filter(
@@ -35,7 +35,9 @@ export const GitRepos = () => {
         ) : TOPRepos && TOPRepos.length > 0 ? (
           TOPRepos?.map((repo, key) => <ReviewCard data={repo} key={key} />)
         ) : (
-          <div>نداری</div>
+          <div className="font-IR_Sans text-white text-2xl">
+            پروژه ای با فیلترهای تعریف شده یافت نشد
+          </div>
         )}
       </div>
     </>
