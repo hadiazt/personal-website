@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Fiverr_Icon = () => {
   return (
     <svg
