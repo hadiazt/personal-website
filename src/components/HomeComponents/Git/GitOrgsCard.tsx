@@ -14,29 +14,29 @@ export const OrgsCard = (data: {
 }) => {
   try {
     const info = data.data;
-    const {
-      isLoading: ReposLoading,
-      error: RepoError,
-      data: ReposData,
-    }: { isLoading?: boolean; error?: any; data?: Array<{}> } = useQuery(
-      `OrgRepos_${info.login}`,
-      async () => axios.get(info.repos_url).then(({ data }) => data)
-    );
-    const {
-      isLoading,
-      error,
-      data: MembersData,
-    }: { isLoading?: boolean; error?: any; data?: Array<{}> } = useQuery(
-      `OrgMembers_${info.login}`,
-      async () =>
-        axios.get(info.members_url.split("{")[0]).then(({ data }) => data)
-    );
-    const ReposCount = ReposData?.length
-      ? ReposData?.length + " / Many Private"
-      : false;
-    const MembersCount = MembersData?.length
-      ? MembersData?.length + " / Many Private"
-      : false;
+    // const {
+    //   isLoading: ReposLoading,
+    //   error: RepoError,
+    //   data: ReposData,
+    // }: { isLoading?: boolean; error?: any; data?: Array<{}> } = useQuery(
+    //   `OrgRepos_${info.login}`,
+    //   async () => axios.get(info.repos_url).then(({ data }) => data)
+    // );
+    // const {
+    //   isLoading,
+    //   error,
+    //   data: MembersData,
+    // }: { isLoading?: boolean; error?: any; data?: Array<{}> } = useQuery(
+    //   `OrgMembers_${info.login}`,
+    //   async () =>
+    //     axios.get(info.members_url.split("{")[0]).then(({ data }) => data)
+    // );
+    // const ReposCount = ReposData?.length
+    //   ? ReposData?.length + " / Many Private"
+    //   : false;
+    // const MembersCount = MembersData?.length
+    //   ? MembersData?.length + " / Many Private"
+    //   : false;
 
     return (
       <Link href={"https://github.com/orgs/" + info.login} target="_blank">
@@ -57,7 +57,7 @@ export const OrgsCard = (data: {
               ? info.description.slice(0, 70) + " ..."
               : info.description}
           </div>
-          <div className="flex">
+          {/* <div className="flex">
             <div className="flex flex-row gap-2 items-center justify-start bg-MidNightBlack mr-3 text-xs text-Green rounded-full p-2 mt-4 ">
               <FaCode />
               {ReposCount ? ReposCount : "Private"}
@@ -66,7 +66,7 @@ export const OrgsCard = (data: {
               <FaUser />
               {MembersCount ? MembersCount : "Private"}
             </div>
-          </div>
+          </div> */}
         </div>
       </Link>
     );
