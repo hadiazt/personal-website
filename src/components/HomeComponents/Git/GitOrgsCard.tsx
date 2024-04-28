@@ -52,7 +52,7 @@ export const OrgsCard = (data: {
               </span>
             </div>
           </div>
-          <div className="text-sm mt-2 text-LightGray font-normal">
+          <div className="text-sm mt-2 text-LightGray font-normal font-IR_Sans">
             {info.description?.length >= 70
               ? info.description.slice(0, 70) + " ..."
               : info.description}

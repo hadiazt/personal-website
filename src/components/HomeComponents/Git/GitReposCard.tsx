@@ -32,7 +32,7 @@ export const RepoCard = (data: {
             {"Created AT " + info.created_at?.split("T")[0]}
           </span>
         </div>
-        <div className="text-sm mt-2 text-LightGray font-normal">
+        <div className="text-sm mt-2 text-LightGray font-normal font-IR_Sans">
           {info.description?.length >= 50
             ? info.description.slice(0, 50) + " ..."
             : info.description}

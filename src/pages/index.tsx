@@ -1,6 +1,7 @@
 import { Footer } from "../components/Footer";
 import { Banner } from "../components/HomeComponents/Banner";
-import { GitRepos } from "../components/HomeComponents/GitRepos";
+import { GitOrgs } from "../components/HomeComponents/Git/GitOrgs";
+import { GitRepos } from "../components/HomeComponents/Git/GitRepos";
 import { MyExpertise } from "../components/HomeComponents/Expertise/MyExpertise";
 
 export default () => {
@@ -10,6 +11,7 @@ export default () => {
         <Banner />
         <MyExpertise />
         <GitRepos />
+        <GitOrgs />
         <Footer />
       </div>
     </div>
