@@ -5,7 +5,7 @@ export const DESIGNATION = "Full-Stack Developer";
 export const DETAILS = {
   کشور: "ایران",
   شهر: "رشت",
-  سن: "21",
+  سن: Number(new Date().getFullYear()) - 2003,
 };
 
 export const HeaderInfo = [

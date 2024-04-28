@@ -2,10 +2,7 @@ import { FC } from "react";
 import { NavItem } from "./NavItem";
 import { ImHome } from "react-icons/im";
 import { ImCross } from "react-icons/im";
-import { FiAward } from "react-icons/fi";
-import { FaHandshake } from "react-icons/fa";
 import { DrawerLayout } from "../DrawerLayout";
-import { HiIdentification } from "react-icons/hi";
 
 interface NavProps {
   setIsOpen: (isOpen: boolean) => void;
@@ -29,7 +26,7 @@ export const Nav: FC<NavProps> = ({ setIsOpen, isOpen }) => {
             NavIcon={<ImHome />}
             NavText={"خانه"}
           />
-          <NavItem
+          {/* <NavItem
             setIsOpen={setIsOpen}
             NavRoute={"/contact"}
             NavIcon={<FaHandshake />}
@@ -46,7 +43,7 @@ export const Nav: FC<NavProps> = ({ setIsOpen, isOpen }) => {
             NavRoute={"/portfolio"}
             NavIcon={<FiAward />}
             NavText={"Portfolio"}
-          />
+          /> */}
         </div>
       </div>
     </DrawerLayout>
