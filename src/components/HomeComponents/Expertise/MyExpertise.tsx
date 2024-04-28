@@ -18,7 +18,9 @@ export const MyExpertise = () => {
       </div>
       <div className="grid justify-items-center grid-flow-row md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4 px-2 md:px-8">
         {isLoading
-          ? [1, 2, 3, 4, 5, 6].map((_, index) => <ParagraphSkeleton />)
+          ? [1, 2, 3, 4, 5, 6].map((_, index) => (
+              <ParagraphSkeleton className="space-y-2 p-8" />
+            ))
           : data?.map((item: any, index: number) => (
               <ExpertiseCard key={index} data={item} />
             ))}
