@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.cjs",
+    "next.config.cjs", "src/pages/layout.js",
   ],
   "exclude": [
     "node_modules"

@@ -4,7 +4,7 @@ import { Intro } from "../components/Common/Intro";
 import { SlOptionsVertical } from "react-icons/sl";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 
-export const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [intro, setIntro] = useState(false);
 
@@ -75,4 +75,4 @@ export const Layout = ({ children }) => {
       </div>
     </div>
   );
-};
+}
