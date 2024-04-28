@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  transition: all;
+  background-color: #000 !important;
+  transition: width 5s ease-in 0.2s;
+  overflow: hidden;
+  height: 100vh;
+}
+
+@layer utilities {
+  @layer components {
+    .transition {
+      @apply transition-all delay-200 !duration-1000;
+    }
+    .card_stylings {
+      @apply bg-EveningBlack/95 rounded-xl hover:bg-gradient-to-br hover:from-Green/10 hover:to-indigo-600/5;
+    }
+    .button {
+      @apply bg-Green hover:bg-Green/60 transition rounded-xl text-MidNightBlack text-base font-medium  px-8 py-2;
+    }
+    .input_stylings {
+      @apply bg-DeepNightBlack text-SilverGray text-sm rounded-lg outline-none focus:ring-1 focus:ring-Green block w-full pl-10 p-2.5;
+    }
+
+    @font-face {
+      font-family: "cascadia-normal";
+      src: url(../public/fonts/Cascadia.ttf);
+    }
+    @font-face {
+      font-family: "circular-light";
+      src: url(../public/fonts/Circular-Light.otf);
+    }
+    @font-face {
+      font-family: "circular-normal";
+      src: url(../public/fonts/Circular-Book.otf);
+    }
+    @font-face {
+      font-family: "circular-medium";
+      src: url(../public/fonts/Circular-Medium.otf);
+    }
+    @font-face {
+      font-family: "circular-bold";
+      src: url(../public/fonts/Circular-Bold.otf);
+    }
+  }
+  @layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #1fdf64;
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1fdf64;
+    }
+  }
+
+  .icon {
+    animation-name: scale-icon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes scale-icon {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.06);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+/* antd css */
+.ant-progress-text {
+  color: white !important;
+}
+.ant-modal .ant-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  height: 200px;
+}
+.boxShodow:hover {
+  box-shadow: rgba(31, 223, 100, 1) 0px 2px 5px -1px,
+    rgba(31, 223, 100, 1) 0px 1px 3px -1px;
+}
+
+.userIcon:focus-within #icon {
+  color: #1fdf64;
+}
+.mailIcon:focus-within #icon {
+  color: #1fdf64;
+}
+.textIcon:focus-within #icon {
+  color: #1fdf64;
+}
