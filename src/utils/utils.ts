@@ -1,4 +1,4 @@
-export const getObjectKeys = (obj: string) => {
+export const getObjectKeys = (obj: {}) => {
   const keys = Object.keys(obj);
   return keys;
 };

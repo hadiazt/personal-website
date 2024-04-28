@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Intro from "../components/Common/Intro";
-import Nav from "../components/Common/Nav/Nav";
+import { Nav } from "../components/Common/Nav/Nav";
+import { Intro } from "../components/Common/Intro";
 import { SlOptionsVertical } from "react-icons/sl";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 

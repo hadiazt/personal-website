@@ -4,7 +4,7 @@ import emoji from "../../public/images/emoji.png";
 import { BannerLayout } from "../Common/BannerLayout";
 import { HeaderInfo } from "../../constants/constants";
 
-const Banner = () => {
+export const Banner = () => {
   return (
     <BannerLayout>
       <div className="absolute inset-0 z-20 flex flex-col items-center py-6 justify-center w-full h-full bg-gradient-to-t from-MidNightBlack">
@@ -23,7 +23,7 @@ const Banner = () => {
                       <Typewriter
                         options={{
                           strings: [
-                            "BackEnd Full Stack Developer",
+                            "BackEnd High-Level Developer",
                             "FrontEnd  Mid-Level Developer",
                             "MERN Stack Developer",
                           ],
@@ -56,11 +56,11 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:gap-0 md:flex items-center justify-between w-full px-4 xl:px-8 2xl:px-16">
+        <div className="grid grid-cols-2 gap-4 md:gap-0 md:flex items-center justify-between w-full px-4 xl:px-8 2xl:px-16 font-IR_Aviny ">
           {HeaderInfo.map((info, index) => {
             return (
-              <div className="flex items-center gap-x-1" key={index}>
-                <span className="text-xs text-Snow">{info.title}</span>
+              <div className="flex items-center gap-x-1 text-2xl" key={index}>
+                <span className="text-Snow">{info.title}</span>
                 <span className="text-base md:text-lg text-Green font-bold">
                   {info.value}+
                 </span>
@@ -72,5 +72,3 @@ const Banner = () => {
     </BannerLayout>
   );
 };
-
-export default Banner;
