@@ -9,7 +9,7 @@ export default () => {
     <div className="Home-Page -z-10" dir="rtl">
       <div className="rounded-3xl overflow-hidden">
         <Banner />
-        <MyExpertise />
+        {/* <MyExpertise /> */}
         <GitRepos />
         <GitOrgs />
         <Footer />
