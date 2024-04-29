@@ -58,6 +58,8 @@ export const SKILLS = [
   { title: "GitHub", url: "https://github.com", level: 85 },
   { title: "Git", url: "https://git-scm.com", level: 70 },
   { title: "ElectronJS", url: "https://electronjs.org", level: 35 },
+  { title: "DiscordJS", url: "https://discord.js.org", level: 80 },
+  { title: "TelegrafJS", url: "https://telegraf.js.org", level: 80 },
 ];
 
 export const CONTACTS = {
