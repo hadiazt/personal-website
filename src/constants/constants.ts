@@ -19,7 +19,7 @@ export const HeaderInfo = [
   },
   {
     title: "تجربه کاری",
-    value: 5 + " سال",
+    value: Number(new Date().getFullYear()) - 2019 + " سال",
   },
 ];
 
