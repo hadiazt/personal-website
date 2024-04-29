@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev -p 8000",
-    "start": "yarn build && next start -p 4000",
+    "start": "yarn build && next start -p 3000",
     "build": "next build",
     "lint": "next lint"
   },
