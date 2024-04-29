@@ -1,4 +1,4 @@
 todo 
-- add meta tags
+- ~~add meta tags~~
 - finish api/expertise
 - write readme

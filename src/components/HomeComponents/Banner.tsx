@@ -23,8 +23,8 @@ export const Banner = () => {
                       <Typewriter
                         options={{
                           strings: [
-                            "BackEnd High-Level Developer",
-                            "FrontEnd  Mid-Level Developer",
+                            "High-Level BackEnd Developer",
+                            "Mid-Level FrontEnd Developer",
                             "MERN Stack Developer",
                           ],
                           autoStart: true,
