@@ -1,4 +1,4 @@
-export const ExpertiseCard = (data: {
+export const ProjectsCard = (data: {
   data?: { title: string; desc: string };
 }) => {
   return (

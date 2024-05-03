@@ -26,24 +26,6 @@ export const Nav: FC<NavProps> = ({ setIsOpen, isOpen }) => {
             NavIcon={<ImHome />}
             NavText={"خانه"}
           />
-          {/* <NavItem
-            setIsOpen={setIsOpen}
-            NavRoute={"/contact"}
-            NavIcon={<FaHandshake />}
-            NavText={"Contact"}
-          />
-          <NavItem
-            setIsOpen={setIsOpen}
-            NavRoute={"/background"}
-            NavIcon={<HiIdentification />}
-            NavText={"Background"}
-          />
-          <NavItem
-            setIsOpen={setIsOpen}
-            NavRoute={"/portfolio"}
-            NavIcon={<FiAward />}
-            NavText={"Portfolio"}
-          /> */}
         </div>
       </div>
     </DrawerLayout>

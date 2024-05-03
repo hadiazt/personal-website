@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "next lint",
     "build": "next build",
-    "dev": "next dev -p 8000",
+    "dev": "next dev -p 3000",
     "start": "yarn build && next start -p 3000",
     "pm2": "yarn build && pm2 start --env production"
   },

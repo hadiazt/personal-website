@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useQuery } from "react-query";
-import { ExpertiseCard } from "./ExpertiseCard";
+import { ProjectsCard } from "./ProjectsCard";
 import { ParagraphSkeleton } from "../../Common/ParagraphSkeleton";
 
-export const MyExpertise = () => {
+export const MyProjects = () => {
   const { isLoading, error, data } = useQuery("expertise", () =>
     axios
       .get("api/expertise")
@@ -22,7 +22,7 @@ export const MyExpertise = () => {
               <ParagraphSkeleton className="space-y-2 p-8" />
             ))
           : data?.map((item: any, index: number) => (
-              <ExpertiseCard key={index} data={item} />
+              <ProjectsCard key={index} data={item} />
             ))}
       </div>
     </>
