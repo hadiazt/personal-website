@@ -25,6 +25,11 @@ export const HeaderInfo = [
 
 export const SKILLS = [
   {
+    title: "TS/JS (TypeScript/JavaScript)",
+    url: "https://www.google.com/search?q=typescript+and+javascript",
+    level: 100,
+  },
+  {
     title: "ExpressJS",
     url: "https://expressjs.com",
     level: 98,
@@ -42,7 +47,7 @@ export const SKILLS = [
   {
     title: "NextJS",
     url: "https://nextjs.org",
-    level: 30,
+    level: 15,
   },
   {
     title: "TailwindCSS",
