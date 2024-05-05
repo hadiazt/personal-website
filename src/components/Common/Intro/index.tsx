@@ -4,6 +4,7 @@ import {
   FaDiscord,
   FaLinkedin,
   FaTelegram,
+  FaSteam,
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -60,6 +61,14 @@ export const Intro = () => {
           className=""
         >
           <FaLinkedin />
+        </Link>
+        <Link
+          href={SOCIAL_LINKS.STEAM}
+          target="_blank"
+          rel="noreferrer"
+          className=""
+        >
+          <FaSteam />
         </Link>
       </div>
     </>

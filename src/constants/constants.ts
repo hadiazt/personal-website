@@ -78,4 +78,5 @@ export const SOCIAL_LINKS = {
   TWITTER: "https://twitter.com/hadiazt",
   DISCORD: "https://discord.com/channels/@800769565877338122",
   TG: "https://t.me/hadiazt",
+  STEAM: "https://steamcommunity.com/id/hadiaz",
 };
