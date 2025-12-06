@@ -8,14 +8,11 @@ import {
   Activity,
   AlertCircle,
   ExternalLink,
-  ChevronLeft,
-  ChevronRight,
-  Calendar,
 } from "lucide-react";
 import clsx from "clsx";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const GITHUB_USERNAME = "hadiazt";
@@ -24,15 +21,6 @@ interface ContributionDay {
   date: string;
   count: number;
   level: number;
-}
-
-interface ContributionYear {
-  year: string;
-  total: number;
-  range: {
-    start: string;
-    end: string;
-  };
 }
 
 interface ContributionsData {
@@ -208,37 +196,6 @@ export const GitHubStatsPage = () => {
       : ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"];
     return colors[level] || colors[0];
   };
-
-  const months =
-    i18n.language === "fa"
-      ? [
-          "ژانویه",
-          "فوریه",
-          "مارس",
-          "آوریل",
-          "می",
-          "ژوئن",
-          "جولای",
-          "آگوست",
-          "سپتامبر",
-          "اکتبر",
-          "نوامبر",
-          "دسامبر",
-        ]
-      : [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
 
   // Calculate stats
   const totalStars = repos.reduce(
@@ -543,47 +500,6 @@ export const GitHubStatsPage = () => {
               </p>
             )}
           </div>
-
-          {/* Year Selector */}
-          <div className="flex items-center gap-2">
-            <motion.button
-              onClick={() => {
-                const idx = availableYears.indexOf(selectedYear);
-                if (idx < availableYears.length - 1) {
-                  setSelectedYear(availableYears[idx + 1]);
-                }
-              }}
-              disabled={
-                availableYears.indexOf(selectedYear) ===
-                availableYears.length - 1
-              }
-              className="p-2 rounded-lg bg-[var(--color-bg-tertiary)] disabled:opacity-30 hover:bg-[var(--color-bg-primary)] transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </motion.button>
-
-            <div className="flex items-center gap-2 px-4 py-2 bg-[var(--color-bg-tertiary)] rounded-lg min-w-[100px] justify-center">
-              <Calendar className="w-4 h-4 text-primary-500" />
-              <span className="font-medium">{selectedYear}</span>
-            </div>
-
-            <motion.button
-              onClick={() => {
-                const idx = availableYears.indexOf(selectedYear);
-                if (idx > 0) {
-                  setSelectedYear(availableYears[idx - 1]);
-                }
-              }}
-              disabled={availableYears.indexOf(selectedYear) === 0}
-              className="p-2 rounded-lg bg-[var(--color-bg-tertiary)] disabled:opacity-30 hover:bg-[var(--color-bg-primary)] transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <ChevronRight className="w-4 h-4" />
-            </motion.button>
-          </div>
         </div>
 
         {/* Year Pills */}
@@ -619,7 +535,7 @@ export const GitHubStatsPage = () => {
         </div>
 
         {/* Contribution Grid */}
-        <div className="overflow-x-auto pb-4">
+        <div className="pb-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedYear}
@@ -627,122 +543,80 @@ export const GitHubStatsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
+              dir="ltr"
+              className="w-full"
             >
-              {/* Month labels */}
-              <div className="flex gap-[3px] mb-2 ms-8" dir="ltr">
-                {months.map((month, idx) => (
-                  <div
-                    key={month}
-                    className="text-xs text-[var(--color-text-muted)]"
-                    style={{ width: `${100 / 12}%`, minWidth: "50px" }}
-                  >
-                    {month}
+              {/* Grid with day labels */}
+              <div
+                className="grid"
+                style={{
+                  gridTemplateColumns: `24px repeat(${contributionWeeks.length}, 1fr)`,
+                  gap: "2px",
+                }}
+              >
+                {/* Contribution columns */}
+                {contributionWeeks.map((week, weekIdx) => (
+                  <div key={weekIdx} className="flex flex-col gap-[2px]">
+                    {week.map((day, dayIdx) => (
+                      <motion.div
+                        key={`${weekIdx}-${dayIdx}`}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: weekIdx * 0.003 }}
+                        className={clsx(
+                          "aspect-square rounded-sm w-full",
+                          day.date &&
+                            "cursor-pointer hover:ring-1 hover:ring-primary-500"
+                        )}
+                        style={{
+                          backgroundColor: day.date
+                            ? getContributionColor(
+                                day.level,
+                                document.documentElement.classList.contains(
+                                  "dark"
+                                )
+                              )
+                            : "transparent",
+                        }}
+                        title={
+                          day.date
+                            ? `${day.date}: ${day.count} ${
+                                i18n.language === "fa"
+                                  ? "مشارکت"
+                                  : "contributions"
+                              }`
+                            : ""
+                        }
+                      />
+                    ))}
                   </div>
                 ))}
               </div>
 
-              {/* Grid */}
-              <div className="flex gap-[3px]" dir="ltr">
-                {/* Day labels */}
-                <div className="flex flex-col gap-[3px] text-xs text-[var(--color-text-muted)] pe-2">
-                  <span className="h-[10px]"></span>
-                  <span className="h-[10px]">Mon</span>
-                  <span className="h-[10px]"></span>
-                  <span className="h-[10px]">Wed</span>
-                  <span className="h-[10px]"></span>
-                  <span className="h-[10px]">Fri</span>
-                  <span className="h-[10px]"></span>
-                </div>
-
-                {/* Contribution squares */}
-                <div className="flex gap-[3px]">
-                  {contributionWeeks.map((week, weekIdx) => (
-                    <div key={weekIdx} className="flex flex-col gap-[3px]">
-                      {week.map((day, dayIdx) => (
-                        <motion.div
-                          key={`${weekIdx}-${dayIdx}`}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: weekIdx * 0.01 }}
-                          className="w-[10px] h-[10px] rounded-sm cursor-pointer"
-                          style={{
-                            backgroundColor: day.date
-                              ? getContributionColor(
-                                  day.level,
-                                  document.documentElement.classList.contains(
-                                    "dark"
-                                  )
-                                )
-                              : "transparent",
-                          }}
-                          title={
-                            day.date
-                              ? `${day.date}: ${day.count} contributions`
-                              : ""
-                          }
-                        />
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Legend */}
-              <div className="flex items-center justify-end gap-2 mt-4 text-xs text-[var(--color-text-muted)]">
-                <span>{t("github.less")}</span>
-                <div className="flex gap-[3px]">
-                  {[0, 1, 2, 3, 4].map((level) => (
-                    <div
-                      key={level}
-                      className="w-[10px] h-[10px] rounded-sm"
-                      style={{
-                        backgroundColor: getContributionColor(
-                          level,
-                          document.documentElement.classList.contains("dark")
-                        ),
-                      }}
-                    />
-                  ))}
+              <div className="flex items-center justify-between mt-4 text-xs text-[var(--color-text-muted)]">
+                <div className="flex items-center gap-2">
+                  <span>{t("github.less")}</span>
+                  <div className="flex gap-[2px]">
+                    {[0, 1, 2, 3, 4].map((level) => (
+                      <div
+                        key={level}
+                        className="w-3 h-3 rounded-sm"
+                        style={{
+                          backgroundColor: getContributionColor(
+                            level,
+                            document.documentElement.classList.contains("dark")
+                          ),
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <span>{t("github.more")}</span>
                 </div>
-                <span>{t("github.more")}</span>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Total Stats */}
-        {contributions?.total && (
-          <div className="mt-6 pt-6 border-t border-[var(--color-border)]">
-            <h4 className="text-sm font-medium mb-4">
-              {t("github.allTimeStats")}
-            </h4>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {Object.entries(contributions.total)
-                .sort((a, b) => parseInt(b[0]) - parseInt(a[0]))
-                .map(([year, count]) => (
-                  <motion.div
-                    key={year}
-                    className={clsx(
-                      "p-3 rounded-xl text-center cursor-pointer transition-all",
-                      selectedYear === year
-                        ? "bg-primary-500/10 ring-2 ring-primary-500"
-                        : "bg-[var(--color-bg-tertiary)] hover:bg-[var(--color-bg-primary)]"
-                    )}
-                    onClick={() => setSelectedYear(year)}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <p className="text-lg font-bold">
-                      {count.toLocaleString()}
-                    </p>
-                    <p className="text-xs text-[var(--color-text-muted)]">
-                      {year}
-                    </p>
-                  </motion.div>
-                ))}
-            </div>
-          </div>
-        )}
       </motion.div>
     </motion.div>
   );
