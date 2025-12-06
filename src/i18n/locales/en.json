@@ -1,27 +1,59 @@
 {
   "nav": {
     "home": "Home",
-    "dashboard": "Dashboard",
+    "github": "GitHub",
     "about": "About",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "name": "John Doe",
+    "name": "Hadi Azari",
     "title": "Full Stack Developer",
     "description": "I create beautiful and functional web applications with modern technologies. Let's build something amazing together.",
     "cta": "Get Started",
     "learnMore": "Learn More"
   },
-  "dashboard": {
-    "title": "Analytics Dashboard",
-    "subtitle": "Track your performance metrics",
-    "totalVisits": "Total Visits",
-    "activeUsers": "Active Users",
-    "revenue": "Revenue",
-    "growth": "Growth",
-    "monthlyStats": "Monthly Statistics",
-    "trafficSources": "Traffic Sources"
+  "features": {
+    "api": {
+      "title": "Robust APIs",
+      "description": "Well-documented and scalable backend services"
+    },
+    "performance": {
+      "title": "High Performance",
+      "description": "Optimized server-side code for speed and reliability"
+    },
+    "database": {
+      "title": "Database Design",
+      "description": "Efficient and reliable data models and queries"
+    },
+    "ui": {
+      "title": "Modern UI",
+      "description": "Best-practice, clean and beautiful user interface implementation"
+    },
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "Fully responsive for any device and screen size"
+    },
+    "frontend": {
+      "title": "Frontend Engineering",
+      "description": "Modern frontend workflows, component architectures, and seamless user experience"
+    }
+  },
+  "github": {
+    "title": "GitHub Stats",
+    "subtitle": "My open source contributions and projects",
+    "repos": "Repositories",
+    "stars": "Total Stars",
+    "forks": "Total Forks",
+    "followers": "Followers",
+    "languages": "Top Languages (In Public Repos)",
+    "topRepos": "Top Repositories",
+    "contributions": "Contribution Graph",
+    "contributionsInYear": "contributions in",
+    "allTimeStats": "All-Time Contributions",
+    "less": "Less",
+    "more": "More",
+    "viewProfile": "View Profile"
   },
   "about": {
     "title": "About Me",
@@ -40,4 +72,3 @@
     "fa": "Persian"
   }
 }
-

@@ -32,38 +32,12 @@ const itemVariants = {
 };
 
 const features = [
-  {
-    icon: Code2,
-    title: "Robust APIs",
-    description: "Well-documented and scalable backend services",
-  },
-  {
-    icon: Zap,
-    title: "High Performance",
-    description: "Optimized server-side code for speed and reliability",
-  },
-  {
-    icon: Palette,
-    title: "Database Design",
-    description: "Efficient and reliable data models and queries",
-  },
-  {
-    icon: Sparkles,
-    title: "Modern UI",
-    description:
-      "Best-practice, clean and beautiful user interface implementation",
-  },
-  {
-    icon: ArrowRight,
-    title: "Responsive Design",
-    description: "Fully responsive for any device and screen size",
-  },
-  {
-    icon: Palette,
-    title: "Frontend Engineering",
-    description:
-      "Modern frontend workflows, component architectures, and seamless user experience",
-  },
+  { icon: Code2, key: "api" },
+  { icon: Zap, key: "performance" },
+  { icon: Palette, key: "database" },
+  { icon: Sparkles, key: "ui" },
+  { icon: ArrowRight, key: "responsive" },
+  { icon: Palette, key: "frontend" },
 ];
 
 export const HomePage = () => {
@@ -206,9 +180,9 @@ export const HomePage = () => {
         variants={containerVariants}
         className="mt-24 grid sm:grid-cols-3 gap-6"
       >
-        {features.map((feature, index) => (
+        {features.map((feature) => (
           <motion.div
-            key={feature.title}
+            key={feature.key}
             variants={itemVariants}
             whileHover={{ y: -5, scale: 1.02 }}
             className="card group cursor-pointer"
@@ -216,9 +190,11 @@ export const HomePage = () => {
             <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors duration-300">
               <feature.icon className="w-6 h-6 text-primary-500 group-hover:text-white transition-colors duration-300" />
             </div>
-            <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
+            <h3 className="font-semibold text-lg mb-2">
+              {t(`features.${feature.key}.title`)}
+            </h3>
             <p className="text-[var(--color-text-secondary)] text-sm">
-              {feature.description}
+              {t(`features.${feature.key}.description`)}
             </p>
             <motion.div
               initial={{ width: 0 }}
