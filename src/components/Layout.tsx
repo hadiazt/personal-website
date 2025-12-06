@@ -31,7 +31,6 @@ export function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Detect active section on scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map((item) => document.getElementById(item.id));
@@ -47,7 +46,7 @@ export function Layout({ children }: LayoutProps) {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -67,7 +66,6 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen bg-[var(--color-bg-primary)]">
-      {/* Background decoration - stays fixed, no animation */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div
           className={clsx(
@@ -83,7 +81,6 @@ export function Layout({ children }: LayoutProps) {
         />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-96 bg-gradient-to-t from-accent-500/5 via-primary-500/5 to-transparent rounded-full blur-3xl" />
 
-        {/* Floating Bubbles */}
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
@@ -125,7 +122,6 @@ export function Layout({ children }: LayoutProps) {
           transition={{ duration: 0.25, ease: "easeInOut" }}
           className="relative z-10"
         >
-          {/* Header */}
           <motion.header
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -142,7 +138,6 @@ export function Layout({ children }: LayoutProps) {
                 )}
               >
                 <div className="flex items-center justify-between">
-                  {/* Logo */}
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     onClick={() => scrollToSection("home")}
@@ -156,7 +151,6 @@ export function Layout({ children }: LayoutProps) {
                     </span>
                   </motion.div>
 
-                  {/* Desktop Navigation */}
                   <div className="hidden md:flex items-center gap-1">
                     {navItems.map((item) => (
                       <motion.button
@@ -179,12 +173,10 @@ export function Layout({ children }: LayoutProps) {
                     ))}
                   </div>
 
-                  {/* Actions */}
                   <div className="flex items-center gap-2">
                     <LanguageToggle />
                     <ThemeToggle />
 
-                    {/* Mobile menu button */}
                     <motion.button
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -199,7 +191,6 @@ export function Layout({ children }: LayoutProps) {
                   </div>
                 </div>
 
-                {/* Mobile Navigation */}
                 <motion.div
                   initial={false}
                   animate={{
@@ -232,12 +223,10 @@ export function Layout({ children }: LayoutProps) {
             </div>
           </motion.header>
 
-          {/* Main Content */}
           <main className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             {children}
           </main>
 
-          {/* Footer */}
           <footer className="border-t border-[var(--color-border)] py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
