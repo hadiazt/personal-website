@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import { HomePage } from "./pages/HomePage";
 import { Layout } from "./components/Layout";
 import { AboutPage } from "./pages/AboutPage";
@@ -52,7 +53,7 @@ export const App = () => {
       >
         <GitHubStatsPage />
       </motion.section>
-      
+
       {/* Contact Section */}
       <motion.section
         id="contact"

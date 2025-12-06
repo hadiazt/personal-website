@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Languages, ChevronDown } from "lucide-react";
+import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
-import clsx from "clsx";
+import { Languages, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const languages = [
   { code: "en", name: "English", flag: "🇺🇸" },
