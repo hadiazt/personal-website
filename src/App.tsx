@@ -29,18 +29,6 @@ export const App = () => {
         <HomePage />
       </motion.section>
 
-      {/* GitHub Stats Section */}
-      <motion.section
-        id="github"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="min-h-screen pt-24"
-      >
-        <GitHubStatsPage />
-      </motion.section>
-
       {/* About Section */}
       <motion.section
         id="about"
@@ -53,6 +41,18 @@ export const App = () => {
         <AboutPage />
       </motion.section>
 
+      {/* GitHub Stats Section */}
+      <motion.section
+        id="github"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="min-h-screen pt-24"
+      >
+        <GitHubStatsPage />
+      </motion.section>
+      
       {/* Contact Section */}
       <motion.section
         id="contact"

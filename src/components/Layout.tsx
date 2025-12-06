@@ -20,8 +20,8 @@ interface LayoutProps {
 
 const navItems = [
   { id: "home", icon: Home, labelKey: "nav.home" },
-  { id: "github", icon: Github, labelKey: "nav.github" },
   { id: "about", icon: User, labelKey: "nav.about" },
+  { id: "github", icon: Github, labelKey: "nav.github" },
   { id: "contact", icon: Mail, labelKey: "nav.contact" },
 ];
 
