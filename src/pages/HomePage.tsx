@@ -1,8 +1,15 @@
+import {
+  Zap,
+  Code2,
+  Palette,
+  Sparkles,
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
 import clsx from "clsx";
+import i18n from "@/i18n";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Sparkles, Code2, Palette, Zap } from "lucide-react";
-import i18n from "@/i18n";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -101,13 +108,10 @@ export const HomePage = () => {
               className="btn-primary flex items-center gap-2"
             >
               {t("hero.cta")}
-              {i18n.language === "fa" ? (
-                <ArrowRight
-                  style={{ transform: "scaleX(-1)" }}
-                  className="w-4 h-4"
-                />
-              ) : (
+              {i18n.language === "en" ? (
                 <ArrowRight className="w-4 h-4" />
+              ) : (
+                <ArrowLeft className="w-4 h-4" />
               )}
             </motion.button>
             <motion.button
@@ -151,7 +155,7 @@ export const HomePage = () => {
               }}
               className="absolute inset-8 rounded-full border-2 border-dashed border-accent-500/30"
             />
-            {/* Center - Profile Image as the inner circle */}
+            {/* Center */}
             <motion.div
               animate={{
                 scale: [1, 1.05, 1],
@@ -204,7 +208,7 @@ export const HomePage = () => {
       >
         {features.map((feature, index) => (
           <motion.div
-            key={index}
+            key={feature.title}
             variants={itemVariants}
             whileHover={{ y: -5, scale: 1.02 }}
             className="card group cursor-pointer"
