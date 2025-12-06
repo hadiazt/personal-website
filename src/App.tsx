@@ -66,5 +66,4 @@ export const App = () => {
       </motion.section>
     </Layout>
   );
-}
-
+};
