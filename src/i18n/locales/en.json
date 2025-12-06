@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "John Doe",
+    "title": "Full Stack Developer",
+    "description": "I create beautiful and functional web applications with modern technologies. Let's build something amazing together.",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "dashboard": {
+    "title": "Analytics Dashboard",
+    "subtitle": "Track your performance metrics",
+    "totalVisits": "Total Visits",
+    "activeUsers": "Active Users",
+    "revenue": "Revenue",
+    "growth": "Growth",
+    "monthlyStats": "Monthly Statistics",
+    "trafficSources": "Traffic Sources"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Passionate developer with years of experience building web applications."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "en": "English",
+    "fa": "Persian"
+  }
+}
+
