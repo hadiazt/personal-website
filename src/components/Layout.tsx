@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, ReactNode } from "react";
-import { Home, BarChart3, User, Mail, Menu, X } from "lucide-react";
+import { Home, Github, User, Mail, Menu, X } from "lucide-react";
 
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
@@ -20,7 +20,7 @@ interface LayoutProps {
 
 const navItems = [
   { id: "home", icon: Home, labelKey: "nav.home" },
-  { id: "dashboard", icon: BarChart3, labelKey: "nav.dashboard" },
+  { id: "github", icon: Github, labelKey: "nav.github" },
   { id: "about", icon: User, labelKey: "nav.about" },
   { id: "contact", icon: Mail, labelKey: "nav.contact" },
 ];

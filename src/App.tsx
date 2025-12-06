@@ -3,7 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { Layout } from "./components/Layout";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
-import { DashboardPage } from "./pages/DashboardPage";
+import { GitHubStatsPage } from "./pages/GitHubStatsPage";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -29,16 +29,16 @@ export const App = () => {
         <HomePage />
       </motion.section>
 
-      {/* Dashboard Section */}
+      {/* GitHub Stats Section */}
       <motion.section
-        id="dashboard"
+        id="github"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         className="min-h-screen pt-24"
       >
-        <DashboardPage />
+        <GitHubStatsPage />
       </motion.section>
 
       {/* About Section */}
