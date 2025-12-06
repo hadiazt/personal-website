@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { ArrowRight, Sparkles, Code2, Palette, Zap } from 'lucide-react';
-import clsx from 'clsx';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Sparkles, Code2, Palette, Zap } from "lucide-react";
+import clsx from "clsx";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,12 +24,41 @@ const itemVariants = {
 };
 
 const features = [
-  { icon: Code2, title: 'Clean Code', description: 'Well-structured and maintainable' },
-  { icon: Palette, title: 'Beautiful UI', description: 'Modern and responsive design' },
-  { icon: Zap, title: 'Fast Performance', description: 'Optimized for speed' },
+  {
+    icon: Code2,
+    title: "Robust APIs",
+    description: "Well-documented and scalable backend services",
+  },
+  {
+    icon: Zap,
+    title: "High Performance",
+    description: "Optimized server-side code for speed and reliability",
+  },
+  {
+    icon: Palette,
+    title: "Database Design",
+    description: "Efficient and reliable data models and queries",
+  },
+  {
+    icon: Sparkles,
+    title: "Modern UI",
+    description:
+      "Best-practice, clean and beautiful user interface implementation",
+  },
+  {
+    icon: ArrowRight,
+    title: "Responsive Design",
+    description: "Fully responsive for any device and screen size",
+  },
+  {
+    icon: Palette,
+    title: "Frontend Engineering",
+    description:
+      "Modern frontend workflows, component architectures, and seamless user experience",
+  },
 ];
 
-export function HomePage() {
+export const HomePage = () => {
   const { t } = useTranslation();
 
   return (
@@ -45,7 +74,7 @@ export function HomePage() {
           <motion.div variants={itemVariants}>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 text-primary-500 text-sm font-medium border border-primary-500/20">
               <Sparkles className="w-4 h-4" />
-              {t('hero.greeting')}
+              {t("hero.greeting")}
             </span>
           </motion.div>
 
@@ -53,15 +82,15 @@ export function HomePage() {
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight"
           >
-            <span className="block">{t('hero.name')}</span>
-            <span className="gradient-text">{t('hero.title')}</span>
+            <span className="block">{t("hero.name")}</span>
+            <span className="gradient-text">{t("hero.title")}</span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-lg text-[var(--color-text-secondary)] max-w-lg text-balance"
           >
-            {t('hero.description')}
+            {t("hero.description")}
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
@@ -70,7 +99,7 @@ export function HomePage() {
               whileTap={{ scale: 0.95 }}
               className="btn-primary flex items-center gap-2"
             >
-              {t('hero.cta')}
+              {t("hero.cta")}
               <ArrowRight className="w-4 h-4" />
             </motion.button>
             <motion.button
@@ -78,7 +107,7 @@ export function HomePage() {
               whileTap={{ scale: 0.95 }}
               className="btn-secondary"
             >
-              {t('hero.learnMore')}
+              {t("hero.learnMore")}
             </motion.button>
           </motion.div>
         </div>
@@ -98,7 +127,7 @@ export function HomePage() {
               transition={{
                 duration: 20,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
               }}
               className="absolute inset-0 rounded-full border-2 border-dashed border-primary-500/30"
             />
@@ -110,10 +139,11 @@ export function HomePage() {
               transition={{
                 duration: 15,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
               }}
               className="absolute inset-8 rounded-full border-2 border-dashed border-accent-500/30"
             />
+            {/* Center - Profile Image as the inner circle */}
             <motion.div
               animate={{
                 scale: [1, 1.05, 1],
@@ -121,21 +151,16 @@ export function HomePage() {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
-              className="absolute inset-16 rounded-full bg-gradient-to-br from-primary-500/20 to-accent-500/20 backdrop-blur-sm"
-            />
-            
-            {/* Center content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-400 shadow-2xl shadow-primary-500/40 flex items-center justify-center"
-              >
-                <Code2 className="w-16 h-16 text-white" />
-              </motion.div>
-            </div>
+              className="absolute inset-16 rounded-full overflow-hidden shadow-2xl shadow-primary-500/40 ring-4 ring-primary-500/30"
+            >
+              <img
+                src="/me.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
 
             {/* Floating elements */}
             {[...Array(4)].map((_, i) => (
@@ -185,7 +210,7 @@ export function HomePage() {
             </p>
             <motion.div
               initial={{ width: 0 }}
-              whileHover={{ width: '100%' }}
+              whileHover={{ width: "100%" }}
               transition={{ duration: 0.3 }}
               className="h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 mt-4 rounded-full"
             />
@@ -194,5 +219,4 @@ export function HomePage() {
       </motion.div>
     </motion.div>
   );
-}
-
+};
