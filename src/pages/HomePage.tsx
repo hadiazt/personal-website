@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Sparkles, Code2, Palette, Zap } from "lucide-react";
-import clsx from "clsx";
+import i18n from "@/i18n";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -100,7 +101,14 @@ export const HomePage = () => {
               className="btn-primary flex items-center gap-2"
             >
               {t("hero.cta")}
-              <ArrowRight className="w-4 h-4" />
+              {i18n.language === "fa" ? (
+                <ArrowRight
+                  style={{ transform: "scaleX(-1)" }}
+                  className="w-4 h-4"
+                />
+              ) : (
+                <ArrowRight className="w-4 h-4" />
+              )}
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -196,7 +204,7 @@ export const HomePage = () => {
       >
         {features.map((feature, index) => (
           <motion.div
-            key={feature.title}
+            key={index}
             variants={itemVariants}
             whileHover={{ y: -5, scale: 1.02 }}
             className="card group cursor-pointer"
