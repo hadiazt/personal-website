@@ -1,8 +1,9 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { Home, BarChart3, User, Mail, Menu, X } from "lucide-react";
-import { useState, useEffect, ReactNode } from "react";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, ReactNode } from "react";
+import { Home, BarChart3, User, Mail, Menu, X } from "lucide-react";
+
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
 import { useDirection } from "../hooks/useDirection";
@@ -90,17 +91,18 @@ export function Layout({ children }: LayoutProps) {
               "absolute rounded-full blur-sm",
               i % 3 === 0 && "bg-primary-400/40 dark:bg-primary-500/30",
               i % 3 === 1 && "bg-accent-400/40 dark:bg-accent-500/30",
-              i % 3 === 2 && "bg-gradient-to-br from-primary-400/35 to-accent-400/35 dark:from-primary-500/25 dark:to-accent-500/25"
+              i % 3 === 2 &&
+                "bg-gradient-to-br from-primary-400/35 to-accent-400/35 dark:from-primary-500/25 dark:to-accent-500/25"
             )}
             style={{
               width: `${20 + (i % 6) * 15}px`,
               height: `${20 + (i % 6) * 15}px`,
-              left: `${3 + (i * 7) % 92}%`,
-              top: `${5 + (i * 11) % 85}%`,
+              left: `${3 + ((i * 7) % 92)}%`,
+              top: `${5 + ((i * 11) % 85)}%`,
             }}
             animate={{
               y: [0, -40 - (i % 4) * 15, 0],
-              x: [0, (i % 2 === 0 ? 20 : -20), 0],
+              x: [0, i % 2 === 0 ? 20 : -20, 0],
               scale: [1, 1.15, 1],
             }}
             transition={{
