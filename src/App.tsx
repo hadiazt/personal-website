@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Layout } from "./components/Layout";
 import { HomePage } from "./pages/HomePage";
-import { DashboardPage } from "./pages/DashboardPage";
+import { Layout } from "./components/Layout";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
+import { DashboardPage } from "./pages/DashboardPage";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -14,7 +14,7 @@ const sectionVariants = {
   },
 };
 
-function App() {
+export const App = () => {
   return (
     <Layout>
       {/* Home Section */}
@@ -68,4 +68,3 @@ function App() {
   );
 }
 
-export default App;
