@@ -580,11 +580,9 @@ export const GitHubStatsPage = () => {
                         }}
                         title={
                           day.date
-                            ? `${day.date}: ${day.count} ${
-                                i18n.language === "fa"
-                                  ? "مشارکت"
-                                  : "contributions"
-                              }`
+                            ? `${day.date}: ${day.count} ${t(
+                                "github.contribution"
+                              )}`
                             : ""
                         }
                       />
