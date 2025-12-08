@@ -48,6 +48,7 @@
     "followers": "Followers",
     "languages": "Top Languages (In Public Repos)",
     "topRepos": "Top Repositories",
+    "contribution": "contribution",
     "contributions": "Contribution Graph",
     "contributionsInYear": "contributions in",
     "allTimeStats": "All-Time Contributions",
@@ -57,7 +58,77 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Passionate developer with years of experience building web applications."
+    "skills": "Skills & Technologies",
+    "experience": "Experience & Journey",
+    "scrollToSee": "Scroll to see more",
+    "mySpace": "My Space",
+    "skillCategories": {
+      "runtime": "Runtime & Languages",
+      "frameworks": "Frameworks",
+      "databases": "Databases & ORM",
+      "realtime": "Real-time & APIs",
+      "bots": "Bots & Desktop",
+      "devops": "DevOps & Tools"
+    },
+    "timeline": {
+      "job1": {
+        "title": "Senior Developer",
+        "company": "Company Name",
+        "description": "Description of your role and achievements..."
+      },
+      "job2": {
+        "title": "Full Stack Developer",
+        "company": "Company Name",
+        "description": "Description of your role and achievements..."
+      },
+      "job3": {
+        "title": "Backend Developer",
+        "company": "Company Name",
+        "description": "Description of your role and achievements..."
+      },
+      "education1": {
+        "title": "Computer Science",
+        "company": "University Name",
+        "description": "Your education details..."
+      },
+      "award1": {
+        "title": "Achievement",
+        "company": "Organization",
+        "description": "Description of your achievement..."
+      }
+    },
+    "systems": {
+      "gaming": {
+        "name": "Gaming Rig",
+        "description": "For Gaming & Entertainment"
+      },
+      "dev": {
+        "name": "Dev Machine",
+        "description": "For Coding & Development"
+      }
+    },
+    "specs": {
+      "os": "Operating System",
+      "mainBoard": "Main Board",
+      "cpu": "CPU",
+      "gpu": "GPU",
+      "ram": "RAM",
+      "storage": "Storage",
+      "monitor": "Monitor",
+      "case": "Case",
+      "cooling": "CPU Cooler",
+      "powerSupply": "Power Supply"
+    },
+    "peripherals": {
+      "title": "Peripherals",
+      "description": "My gaming and productivity gear",
+      "mouse": "Mouse",
+      "mousePad": "Mouse Pad",
+      "keyboard": "Keyboard",
+      "headset": "Headset",
+      "speaker": "Speaker",
+      "webcam": "Webcam"
+    }
   },
   "footer": {
     "rights": "All rights reserved",
