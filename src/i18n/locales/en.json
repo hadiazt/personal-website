@@ -46,6 +46,7 @@
     "stars": "Total Stars",
     "forks": "Total Forks",
     "followers": "Followers",
+    "organizations": "Organizations",
     "languages": "Top Languages (In Public Repos)",
     "topRepos": "Top Repositories",
     "contribution": "contribution",

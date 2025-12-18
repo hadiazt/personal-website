@@ -54,6 +54,14 @@ interface GitHubRepo {
   topics: string[];
 }
 
+interface GitHubOrganization {
+  id: number;
+  login: string;
+  avatar_url: string;
+  description: string;
+  url: string;
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -93,6 +101,7 @@ export const GitHubStatsPage = () => {
   const { t, i18n } = useTranslation();
   const [user, setUser] = useState<GitHubUser | null>(null);
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
+  const [organizations, setOrganizations] = useState<GitHubOrganization[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [contributions, setContributions] = useState<ContributionsData | null>(
@@ -123,6 +132,15 @@ export const GitHubStatsPage = () => {
         );
         const reposData = await reposRes.json();
         setRepos(reposData);
+
+        // Fetch organizations
+        const orgsRes = await fetch(
+          `https://api.github.com/users/${GITHUB_USERNAME}/orgs`
+        );
+        if (orgsRes.ok) {
+          const orgsData = await orgsRes.json();
+          setOrganizations(orgsData);
+        }
 
         // Fetch contributions
         const contribRes = await fetch(
@@ -380,6 +398,43 @@ export const GitHubStatsPage = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Organizations Section */}
+      {organizations.length > 0 && (
+        <motion.div variants={itemVariants} className="card">
+          <h3 className="font-semibold mb-6 flex items-center gap-2">
+            <Users className="w-5 h-5 text-primary-500" />
+            {t("github.organizations")}
+          </h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {organizations.map((org) => (
+              <motion.a
+                key={org.id}
+                href={`https://github.com/${org.login}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-4 rounded-xl bg-[var(--color-bg-tertiary)] hover:bg-[var(--color-bg-primary)] transition-colors"
+                whileHover={{ y: -4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <img
+                  src={org.avatar_url}
+                  alt={org.login}
+                  className="w-16 h-16 rounded-xl ring-2 ring-primary-500/20"
+                />
+                <div className="text-center">
+                  <h4 className="font-medium text-sm">{org.login}</h4>
+                  {org.description && (
+                    <p className="text-xs text-[var(--color-text-muted)] mt-1 line-clamp-2">
+                      {org.description}
+                    </p>
+                  )}
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+      )}
 
       {/* Charts and Repos Grid */}
       <div className="grid lg:grid-cols-2 gap-6">
