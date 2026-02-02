@@ -34,6 +34,7 @@ import {
   Camera,
   X,
   ZoomIn,
+  Mic,
 } from "lucide-react";
 
 const containerVariants = {
@@ -191,25 +192,31 @@ const peripherals = [
     key: "mouse",
     icon: Mouse,
     gradient: "from-violet-500 to-purple-600",
-    value: "Razer Viper Mini, Logitech MK240",
+    value: "Razer Deathadder V4 Pro, Logitech MK240",
   },
   {
     key: "mousePad",
     icon: MousePointerSquareDashedIcon,
-    gradient: "from-violet-500 to-purple-600",
-    value: "Razer FireFly V2 Pro",
+    gradient: "from-violet-500 to-pink-600",
+    value: "Razer FireFly V2 Pro, Redragon P046L",
   },
   {
     key: "keyboard",
     icon: Keyboard,
     gradient: "from-blue-500 to-cyan-500",
-    value: "Redragon K552 kumara, Logitech MK240",
+    value: "Redragon K708AK PRO, Logitech MK240",
   },
   {
     key: "headset",
     icon: Headphones,
     gradient: "from-pink-500 to-rose-500",
-    value: "Razer V2 X USB, JBL Tune 770 NC",
+    value: "Razer BlackShark V2 X USB, JBL Tune 770 NC",
+  },
+  {
+    key: "microphone",
+    icon: Mic,
+    gradient: "from-yellow-500 to-orange-500",
+    value: "Razer Seiren V3 Mini",
   },
   {
     key: "speaker",
@@ -307,17 +314,10 @@ export function AboutPage() {
               {/* Image wrapper */}
               <div className="relative bg-[var(--color-bg-secondary)] rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=1920&q=80"
+                  // src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=1920&q=80"
                   alt="My Setup"
                   className="w-full h-auto rounded-2xl"
                 />
-
-                {/* Caption */}
-                <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-white text-center font-medium">
-                    {t("about.setupCaption")}
-                  </p>
-                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -363,7 +363,7 @@ export function AboutPage() {
         </div>
       </motion.div>
 
-      {/* Timeline - Experience */}
+      {/* Timeline - Experience  //TODO: */}
       <motion.div variants={containerVariants}>
         <motion.h2
           variants={itemVariants}
@@ -451,24 +451,24 @@ export function AboutPage() {
           variants={itemVariants}
           className="flex flex-col  items-center justify-center gap-4 mb-8"
         >
-            <h2 className="text-2xl font-display font-bold flex items-center gap-3">
-              <span className="text-3xl">
-                <Computer />
-              </span>
-              {t("about.mySpace")}
-            </h2>
+          <h2 className="text-2xl font-display font-bold flex items-center gap-3">
+            <span className="text-3xl">
+              <Computer />
+            </span>
+            {t("about.mySpace")}
+          </h2>
 
-            {/* View Setup Button */}
-            <motion.button
-              onClick={() => setShowSetupImage(true)}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-shadow"
-            >
-              <Camera className="w-5 h-5" />
-              {t("about.viewSetup")}
-              <ZoomIn className="w-4 h-4 opacity-70" />
-            </motion.button>
+          {/* View Setup Button */}
+          <motion.button
+            onClick={() => setShowSetupImage(true)}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-shadow"
+          >
+            <Camera className="w-5 h-5" />
+            {t("about.viewSetup")}
+            <ZoomIn className="w-4 h-4 opacity-70" />
+          </motion.button>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -562,7 +562,7 @@ export function AboutPage() {
           </div>
 
           {/* Peripherals Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
             {peripherals.map((item, idx) => (
               <motion.div
                 key={item.key}
