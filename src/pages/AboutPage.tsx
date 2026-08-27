@@ -54,7 +54,7 @@ const skills = [
   {
     key: "runtime",
     icon: Code2,
-    items: ["Node.js", "TypeScript", "JavaScript", "Python", "N8N"],
+    items: ["Node.js", "TypeScript", "JavaScript", "Python", "PHP", "N8N"],
   },
   {
     key: "frameworks",
@@ -146,7 +146,7 @@ const mySpace = [
       {
         key: "monitor",
         value:
-          "View Sonic XG2709 180Hz(Primary) | Master Tech VY228HS 75Hz(Secondary)",
+          "MSI MAG 272PF X24 240Hz(Primary) | Master Tech VY228HS 75Hz(Secondary)",
         icon: Monitor,
       },
       { key: "case", value: "Lian Li LANCOOL 205 Mesh White", icon: BoxIcon },
@@ -174,7 +174,7 @@ const mySpace = [
           "Lexar NS100 512GB SATA III(Primary) | WD Blue 512GB HDD(Secondary)",
         icon: HardDrive,
       },
-      { key: "monitor", value: "View Sonic XG2709 180Hz", icon: Monitor },
+      { key: "monitor", value: "MSI MAG 272PF X24 240Hz", icon: Monitor },
       { key: "case", value: "Fater FG-520X (💩)", icon: BoxIcon },
       {
         key: "cooling",
@@ -210,25 +210,25 @@ const peripherals = [
     key: "headset",
     icon: Headphones,
     gradient: "from-pink-500 to-rose-500",
-    value: "Razer BlackShark V2 X USB, JBL Tune 770 NC",
+    value: "Razer Kraken V4, JBL Tune 770 NC",
   },
   {
     key: "microphone",
     icon: Mic,
     gradient: "from-yellow-500 to-orange-500",
-    value: "Razer Seiren V3 Mini",
+    value: "Razer Seiren V3 Chroma",
   },
   {
     key: "speaker",
     icon: Speaker,
     gradient: "from-amber-500 to-orange-500",
-    value: "Redragon Adiemus GS560W",
+    value: "Harman Kardon Aura 4, Redragon Adiemus GS560W",
   },
   {
     key: "webcam",
     icon: Webcam,
     gradient: "from-red-500 to-pink-500",
-    value: "DJI OSMO MOBILE SE",
+    value: "Razer KIYO X, DJI OSMO MOBILE SE",
   },
 ];
 
